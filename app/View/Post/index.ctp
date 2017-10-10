@@ -171,7 +171,13 @@
                     title: $('#title').val(),
                     body: $('#PostBody').val()
                 },
+                beforeSend: function () {
+                    $('.loadImage').show();
+                    $('#backGr').show();
+                },
                 success: function () {
+                    $('.loadImage').hide();
+                    $('#backGr').hide();
                     swal("Create Post Success", {
                         icon: "success",
                         buttons: false
@@ -210,7 +216,13 @@
                             data: {
                                 id: id
                             },
+                            beforeSend: function () {
+                                $('.loadImage').show();
+                                $('#backGr').show();
+                            },
                             success: function (data) {
+                                $('.loadImage').hide();
+                                $('#backGr').hide();
                                 $ele.fadeOut().remove();
                                 swal("Poof! Your imaginary file has been deleted!", {
                                     icon: "success",

@@ -47,11 +47,36 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
     <?php
     echo $this->Html->script('require');
     ?>
+        <style>
+            .loadImage{
+                position: absolute;
+                z-index: 999999;
+                left: calc(100% /2.3);
+                top: calc(100% /3);
+                display: none;
+            }
+            .loadImage img{
+              width: 30%;
+            }
+            #backGr{
+                position: absolute;
+                display: none;
+                width: 100%;
+                height: 100%;
+                background: rgb(253, 253, 253);
+                z-index: 999998;
+                opacity: 0.7;
+            }
+        </style>
 </head>
 <body>
+<div id="backGr"></div>
 <div id="container">
     <div id="content" style="background: #ddd;min-height: 645px">
+        <div class="loadImage">
 
+            <?=  $this->Html->image('ab79a231234507.564a1d23814ef.gif', array('alt' => 'gif'));?>
+        </div>
         <?php echo $this->Flash->render(); ?>
 
         <?php echo $this->fetch('content'); ?>

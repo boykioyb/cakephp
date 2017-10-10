@@ -85,9 +85,8 @@ class PostsController extends AppController
         }
     }
 
-    public function delete()
+    public function delete($id = null)
     {
-        $id = $this->request->data['id'];
         if ($this->Post->delete($id)) {
             $this->Flash->success(
                 __('The post with id: %s has been deleted.', h($id))

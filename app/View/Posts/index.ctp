@@ -77,9 +77,10 @@
                 <td><?= $fixed; ?></td>
                 <td>
                     <?php echo $this->Html->link('',
-                        array('controller' => 'posts', 'action' => 'edit', $post['Post']['id']), array('class' => 'btn btn-success btn-sm fa fa-pencil ')); ?>
-                    <a id="<?php echo $post['Post']['id'];?>" href="#"
-                       class="btn-xoa btn btn-danger btn-sm fa fa-times"></a>
+                        array('controller' => 'posts', 'action' => 'edit', $post['Post']['id']), array('class' => 'btn btn-success btn-sm fa fa-pencil '));
+                        echo $this->Html->link('',
+                        array('controller' => 'posts', 'action' => 'delete', $post['Post']['id']), array('class' => 'btn btn-danger btn-sm fa fa-times','style'=>'margin-left: 3px;')); ?>
+
                 </td>
             </tr>
             <?php endforeach; ?>
@@ -120,52 +121,6 @@
         $('#datetimepicker1').datetimepicker();
         $('#datetimepicker2').datetimepicker();
 
-        $('.btn-xoa').click(function (e) {
-            e.preventDefault();
-            var id = $(this).attr('id');
-            var $ele = $(this).parent().parent();
-            swal({
-                title: "Are you sure?",
-                text: "Your want deleted record",
-                icon: "warning",
-                buttons: true,
-                dangerMode: true,
-            })
-                .then(function (willDelete) {
-                    if (willDelete) {
-                        $.ajax({
-                            url: '<?php echo Router::url(array('controller' => 'posts', 'action' => 'delete'));?>',
-                            dataType: "html",
-                            type: "POST",
-                            data: {
-                                id: id
-                            },
-                            beforeSend: function () {
-                                $('.loadImage').show();
-                                $('#backGr').show();
-                            },
-                            success: function (data) {
-                                $('.loadImage').hide();
-                                $('#backGr').hide();
-                                $ele.fadeOut().remove();
-                                swal("Poof! Your imaginary file has been deleted!", {
-                                    icon: "success",
-                                });
-                            },
-                            complete: function (data) {
-                                console.log(data);
-                            },
-                            error: function (xhr, msg, error) {
-                                swal({
-                                    text: "Failed",
-                                    icon: "error",
-                                })
-                            }
-                        });
-                    } else {
-                        swal("Your imaginary file is safe!");
-                    }
-                });
-        });
+
     });
 </script>

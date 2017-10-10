@@ -161,17 +161,7 @@
             "format": 'YYYY-MM-DD',
             "opens": "left"
         });
-        $("#formAdd").validate({
-            rules: {
-                title: "required",
-                body: "required",
 
-            },
-            messages: {
-                title: "Vui lòng nhập title",
-                body: "Vui lòng nhập body"
-            }
-        });
         $('#addPost').click(function () {
             $.ajax({
                 url: '<?php echo Router::url(array('controller' => 'post', 'action' => 'add'));?>',

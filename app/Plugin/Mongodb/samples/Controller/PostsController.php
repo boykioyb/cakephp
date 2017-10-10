@@ -26,7 +26,7 @@ class PostsController extends AppController {
 	public function index() {
 		$params = array(
 			'fields' => array('title', 'body', 'hoge'),
-			//'fields' => array('Post.title', ),
+			//'fields' => array('Posts.title', ),
 			//'conditions' => array('title' => 'hehe'),
 			//'conditions' => array('hoge' => array('$gt' => '10', '$lt' => '34')),
 			//'order' => array('title' => 1, 'body' => 1),
@@ -35,7 +35,7 @@ class PostsController extends AppController {
 			'page' => 1,
 		);
 		$results = $this->Post->find('all', $params);
-		//$result = $this->Post->find('count', $params);
+		//$result = $this->Posts->find('count', $params);
 		$this->set(compact('results'));
 	}
 
@@ -50,7 +50,7 @@ class PostsController extends AppController {
 
 			$this->Post->create();
 			if ($this->Post->save($this->data)) {
-				$this->flash(__('Post saved.', true), array('action' => 'index'));
+				$this->flash(__('Posts saved.', true), array('action' => 'index'));
 			} else {
 			}
 		}
@@ -65,17 +65,17 @@ class PostsController extends AppController {
  */
 	public function edit($id = null) {
 		if (!$id && empty($this->data)) {
-			$this->flash(__('Invalid Post', true), array('action' => 'index'));
+			$this->flash(__('Invalid Posts', true), array('action' => 'index'));
 		}
 		if (!empty($this->data)) {
 			if ($this->Post->save($this->data)) {
-				$this->flash(__('The Post has been saved.', true), array('action' => 'index'));
+				$this->flash(__('The Posts has been saved.', true), array('action' => 'index'));
 			} else {
 			}
 		}
 		if (empty($this->data)) {
 			$this->data = $this->Post->read(null, $id);
-			//$this->data = $this->Post->find('first', array('conditions' => array('_id' => $id)));
+			//$this->data = $this->Posts->find('first', array('conditions' => array('_id' => $id)));
 		}
 	}
 
@@ -88,12 +88,12 @@ class PostsController extends AppController {
  */
 	public function delete($id = null) {
 		if (!$id) {
-			$this->flash(__('Invalid Post', true), array('action' => 'index'));
+			$this->flash(__('Invalid Posts', true), array('action' => 'index'));
 		}
 		if ($this->Post->delete($id)) {
-			$this->flash(__('Post deleted', true), array('action' => 'index'));
+			$this->flash(__('Posts deleted', true), array('action' => 'index'));
 		} else {
-			$this->flash(__('Post deleted Fail', true), array('action' => 'index'));
+			$this->flash(__('Posts deleted Fail', true), array('action' => 'index'));
 		}
 	}
 
@@ -106,10 +106,10 @@ class PostsController extends AppController {
 	public function deleteall() {
 		$conditions = array('title' => 'aa');
 		if ($this->Post->deleteAll($conditions)) {
-			$this->flash(__('Post deleteAll success', true), array('action' => 'index'));
+			$this->flash(__('Posts deleteAll success', true), array('action' => 'index'));
 
 		} else {
-			$this->flash(__('Post deleteAll Fail', true), array('action' => 'index'));
+			$this->flash(__('Posts deleteAll Fail', true), array('action' => 'index'));
 		}
 	}
 
@@ -125,10 +125,10 @@ class PostsController extends AppController {
 		$field = array('title' => 'ichi' );
 
 		if ($this->Post->updateAll($field, $conditions)) {
-			$this->flash(__('Post updateAll success', true), array('action' => 'index'));
+			$this->flash(__('Posts updateAll success', true), array('action' => 'index'));
 
 		} else {
-			$this->flash(__('Post updateAll Fail', true), array('action' => 'index'));
+			$this->flash(__('Posts updateAll Fail', true), array('action' => 'index'));
 		}
 	}
 

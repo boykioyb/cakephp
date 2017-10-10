@@ -193,7 +193,7 @@ class FormHelper extends AppHelper {
  *
  * If the $field parameter is passed if will return the information for that sole field.
  *
- * `$this->_introspectModel('Post', 'fields', 'title');` will return the schema information for title column
+ * `$this->_introspectModel('Posts', 'fields', 'title');` will return the schema information for title column
  *
  * @param string $model name of the model to extract information from
  * @param string $key name of the special information key to obtain (key, fields, validates, errors)
@@ -835,28 +835,28 @@ class FormHelper extends AppHelper {
  * The text and for attribute are generated off of the fieldname
  *
  * ```
- * echo $this->Form->label('Post.published');
+ * echo $this->Form->label('Posts.published');
  * <label for="PostPublished">Published</label>
  * ```
  *
  * Custom text:
  *
  * ```
- * echo $this->Form->label('Post.published', 'Publish');
+ * echo $this->Form->label('Posts.published', 'Publish');
  * <label for="PostPublished">Publish</label>
  * ```
  *
  * Custom class name:
  *
  * ```
- * echo $this->Form->label('Post.published', 'Publish', 'required');
+ * echo $this->Form->label('Posts.published', 'Publish', 'required');
  * <label for="PostPublished" class="required">Publish</label>
  * ```
  *
  * Custom attributes:
  *
  * ```
- * echo $this->Form->label('Post.published', 'Publish', array(
+ * echo $this->Form->label('Posts.published', 'Publish', array(
  *		'for' => 'post-publish'
  * ));
  * <label for="post-publish">Publish</label>

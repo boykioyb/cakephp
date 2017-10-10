@@ -41,7 +41,7 @@ App::uses('Hash', 'Utility');
  *
  * ```
  *	$this->Paginator->settings = array(
- *		'Post' => array(
+ *		'Posts' => array(
  *			'limit' => 20,
  *			'maxLimit' => 100
  *		),
@@ -49,7 +49,7 @@ App::uses('Hash', 'Utility');
  *	);
  * ```
  *
- * This would allow you to have different pagination settings for `Comment` and `Post` models.
+ * This would allow you to have different pagination settings for `Comment` and `Posts` models.
  *
  * #### Paginating with custom finders
  *
@@ -57,7 +57,7 @@ App::uses('Hash', 'Utility');
  *
  * ```
  * $this->Paginator->settings = array(
- *		'Post' => array(
+ *		'Posts' => array(
  *			'findType' => 'popular'
  *		)
  * );

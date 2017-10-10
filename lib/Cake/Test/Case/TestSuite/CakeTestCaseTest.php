@@ -23,7 +23,7 @@ App::uses('CakeHtmlReporter', 'TestSuite/Reporter');
 App::uses('Model', 'Model');
 
 /**
- * Secondary Post stub class.
+ * Secondary Posts stub class.
  */
 class SecondaryPost extends Model {
 

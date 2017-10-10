@@ -68,14 +68,14 @@ class Controller extends CakeObject implements CakeEventListener {
 /**
  * An array containing the class names of models this controller uses.
  *
- * Example: `public $uses = array('Product', 'Post', 'Comment');`
+ * Example: `public $uses = array('Product', 'Posts', 'Comment');`
  *
  * Can be set to several values to express different options:
  *
  * - `true` Use the default inflected model name.
  * - `array()` Use only models defined in the parent class.
  * - `false` Use no models at all, do not merge with parent class either.
- * - `array('Post', 'Comment')` Use only the Post and Comment models. Models
+ * - `array('Posts', 'Comment')` Use only the Posts and Comment models. Models
  *   Will also be merged with the parent class.
  *
  * The default value is `true`.

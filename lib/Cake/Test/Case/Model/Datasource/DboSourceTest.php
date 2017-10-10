@@ -1554,8 +1554,8 @@ class DboSourceTest extends CakeTestCase {
 				'type' => 'LEFT',
 				'alias' => 'PostsTag',
 				'table' => 'posts_tags',
-				'conditions' => array('PostsTag.post_id = Post.id')
-			), 'LEFT JOIN cakephp.posts_tags AS PostsTag ON (PostsTag.post_id = Post.id)'),
+				'conditions' => array('PostsTag.post_id = Posts.id')
+			), 'LEFT JOIN cakephp.posts_tags AS PostsTag ON (PostsTag.post_id = Posts.id)'),
 			array(array(
 				'type' => 'LEFT',
 				'alias' => 'Stock',
@@ -1592,8 +1592,8 @@ class DboSourceTest extends CakeTestCase {
 				'type' => 'LEFT',
 				'alias' => 'PostsTag',
 				'table' => 'posts_tags',
-				'conditions' => array('PostsTag.post_id = Post.id')
-			), 'LEFT JOIN pre_posts_tags AS PostsTag ON (PostsTag.post_id = Post.id)'),
+				'conditions' => array('PostsTag.post_id = Posts.id')
+			), 'LEFT JOIN pre_posts_tags AS PostsTag ON (PostsTag.post_id = Posts.id)'),
 				array(array(
 					'type' => 'LEFT',
 					'alias' => 'Stock',
@@ -1907,8 +1907,8 @@ class DboSourceTest extends CakeTestCase {
 				array(
 					'id' => '1',
 					'author_id' => '1',
-					'title' => 'First Post',
-					'body' => 'First Post Body',
+					'title' => 'First Posts',
+					'body' => 'First Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:39:23',
 					'updated' => '2007-03-18 10:41:31',
@@ -1916,8 +1916,8 @@ class DboSourceTest extends CakeTestCase {
 				array(
 					'id' => '3',
 					'author_id' => '1',
-					'title' => 'Third Post',
-					'body' => 'Third Post Body',
+					'title' => 'Third Posts',
+					'body' => 'Third Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:43:23',
 					'updated' => '2007-03-18 10:45:31',

@@ -947,13 +947,13 @@ class CakeRequest implements ArrayAccess {
  *
  * ## Reading values.
  *
- * `$request->data('Post.title');`
+ * `$request->data('Posts.title');`
  *
  * When reading values you will get `null` for keys/values that do not exist.
  *
  * ## Writing values
  *
- * `$request->data('Post.title', 'New post!');`
+ * `$request->data('Posts.title', 'New post!');`
  *
  * You can write to any value, even paths/keys that do not exist, and the arrays
  * will be created for you.

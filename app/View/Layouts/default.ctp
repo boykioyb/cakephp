@@ -35,11 +35,12 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
     echo $this->fetch('css');
     echo $this->fetch('script');
     ?>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css"/>
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css"/>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css"/>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -47,27 +48,29 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
     <?php
     echo $this->Html->script('require');
     ?>
-        <style>
-            .loadImage{
-                position: absolute;
-                z-index: 999999;
-                left: calc(100% /2.3);
-                top: calc(100% /3);
-                display: none;
-            }
-            .loadImage img{
-              width: 30%;
-            }
-            #backGr{
-                position: absolute;
-                display: none;
-                width: 100%;
-                height: 100%;
-                background: rgb(253, 253, 253);
-                z-index: 999998;
-                opacity: 0.7;
-            }
-        </style>
+    <style>
+        .loadImage {
+            position: absolute;
+            z-index: 999999;
+            left: calc(100% / 2.3);
+            top: calc(100% / 3);
+            display: none;
+        }
+
+        .loadImage img {
+            width: 30%;
+        }
+
+        #backGr {
+            position: absolute;
+            display: none;
+            width: 100%;
+            height: 100%;
+            background: rgb(253, 253, 253);
+            z-index: 999998;
+            opacity: 0.7;
+        }
+    </style>
 </head>
 <body>
 <div id="backGr"></div>

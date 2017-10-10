@@ -5166,8 +5166,8 @@ class ModelReadTest extends BaseModelTest {
 				'Post' => array(
 					'id' => '1',
 					'author_id' => '1',
-					'title' => 'First Post',
-					'body' => 'First Post Body',
+					'title' => 'First Posts',
+					'body' => 'First Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:39:23',
 					'updated' => '2007-03-18 10:41:31'
@@ -5184,8 +5184,8 @@ class ModelReadTest extends BaseModelTest {
 				'Post' => array(
 					'id' => '2',
 					'author_id' => '3',
-					'title' => 'Second Post',
-					'body' => 'Second Post Body',
+					'title' => 'Second Posts',
+					'body' => 'Second Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:41:23',
 					'updated' => '2007-03-18 10:43:31'
@@ -5202,8 +5202,8 @@ class ModelReadTest extends BaseModelTest {
 				'Post' => array(
 					'id' => '3',
 					'author_id' => '1',
-					'title' => 'Third Post',
-					'body' => 'Third Post Body',
+					'title' => 'Third Posts',
+					'body' => 'Third Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:43:23',
 					'updated' => '2007-03-18 10:45:31'
@@ -5321,8 +5321,8 @@ class ModelReadTest extends BaseModelTest {
 				'Post' => array(
 					'id' => '1',
 					'author_id' => '1',
-					'title' => 'First Post',
-					'body' => 'First Post Body',
+					'title' => 'First Posts',
+					'body' => 'First Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:39:23',
 					'updated' => '2007-03-18 10:41:31'
@@ -5338,8 +5338,8 @@ class ModelReadTest extends BaseModelTest {
 				'Post' => array(
 					'id' => '2',
 					'author_id' => '3',
-					'title' => 'Second Post',
-					'body' => 'Second Post Body',
+					'title' => 'Second Posts',
+					'body' => 'Second Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:41:23',
 					'updated' => '2007-03-18 10:43:31'
@@ -5355,8 +5355,8 @@ class ModelReadTest extends BaseModelTest {
 				'Post' => array(
 					'id' => '3',
 					'author_id' => '1',
-					'title' => 'Third Post',
-					'body' => 'Third Post Body',
+					'title' => 'Third Posts',
+					'body' => 'Third Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:43:23',
 					'updated' => '2007-03-18 10:45:31'
@@ -5598,8 +5598,8 @@ class ModelReadTest extends BaseModelTest {
 				'Post' => array(
 					'id' => '1',
 					'author_id' => '1',
-					'title' => 'First Post',
-					'body' => 'First Post Body',
+					'title' => 'First Posts',
+					'body' => 'First Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:39:23',
 					'updated' => '2007-03-18 10:41:31'
@@ -5629,8 +5629,8 @@ class ModelReadTest extends BaseModelTest {
 				'Post' => array(
 					'id' => '2',
 					'author_id' => '3',
-					'title' => 'Second Post',
-					'body' => 'Second Post Body',
+					'title' => 'Second Posts',
+					'body' => 'Second Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:41:23',
 					'updated' => '2007-03-18 10:43:31'
@@ -5660,8 +5660,8 @@ class ModelReadTest extends BaseModelTest {
 				'Post' => array(
 					'id' => '3',
 					'author_id' => '1',
-					'title' => 'Third Post',
-					'body' => 'Third Post Body',
+					'title' => 'Third Posts',
+					'body' => 'Third Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:43:23',
 					'updated' => '2007-03-18 10:45:31'
@@ -7101,9 +7101,9 @@ class ModelReadTest extends BaseModelTest {
 			'fields' => 'Post.title'
 		));
 		$expected = array(
-			1 => 'First Post',
-			2 => 'Second Post',
-			3 => 'Third Post'
+			1 => 'First Posts',
+			2 => 'Second Posts',
+			3 => 'Third Posts'
 		);
 		$this->assertEquals($expected, $result);
 
@@ -7111,9 +7111,9 @@ class ModelReadTest extends BaseModelTest {
 			'fields' => 'title'
 		));
 		$expected = array(
-			1 => 'First Post',
-			2 => 'Second Post',
-			3 => 'Third Post'
+			1 => 'First Posts',
+			2 => 'Second Posts',
+			3 => 'Third Posts'
 		);
 		$this->assertEquals($expected, $result);
 
@@ -7121,9 +7121,9 @@ class ModelReadTest extends BaseModelTest {
 			'fields' => array('title', 'id')
 		));
 		$expected = array(
-			'First Post' => '1',
-			'Second Post' => '2',
-			'Third Post' => '3'
+			'First Posts' => '1',
+			'Second Posts' => '2',
+			'Third Posts' => '3'
 		);
 		$this->assertEquals($expected, $result);
 
@@ -7132,13 +7132,13 @@ class ModelReadTest extends BaseModelTest {
 		));
 		$expected = array(
 			'2007-03-18 10:39:23' => array(
-				'First Post' => '1'
+				'First Posts' => '1'
 			),
 			'2007-03-18 10:41:23' => array(
-				'Second Post' => '2'
+				'Second Posts' => '2'
 			),
 			'2007-03-18 10:43:23' => array(
-				'Third Post' => '3'
+				'Third Posts' => '3'
 			),
 		);
 		$this->assertEquals($expected, $result);
@@ -7147,9 +7147,9 @@ class ModelReadTest extends BaseModelTest {
 			'fields' => array('Post.body')
 		));
 		$expected = array(
-			1 => 'First Post Body',
-			2 => 'Second Post Body',
-			3 => 'Third Post Body'
+			1 => 'First Posts Body',
+			2 => 'Second Posts Body',
+			3 => 'Third Posts Body'
 		);
 		$this->assertEquals($expected, $result);
 
@@ -7157,9 +7157,9 @@ class ModelReadTest extends BaseModelTest {
 			'fields' => array('Post.title', 'Post.body')
 		));
 		$expected = array(
-			'First Post' => 'First Post Body',
-			'Second Post' => 'Second Post Body',
-			'Third Post' => 'Third Post Body'
+			'First Posts' => 'First Posts Body',
+			'Second Posts' => 'Second Posts Body',
+			'Third Posts' => 'Third Posts Body'
 		);
 		$this->assertEquals($expected, $result);
 
@@ -7169,11 +7169,11 @@ class ModelReadTest extends BaseModelTest {
 		));
 		$expected = array(
 			'mariano' => array(
-				1 => 'First Post',
-				3 => 'Third Post'
+				1 => 'First Posts',
+				3 => 'Third Posts'
 			),
 			'larry' => array(
-				2 => 'Second Post'
+				2 => 'Second Posts'
 		));
 		$this->assertEquals($expected, $result);
 
@@ -8346,7 +8346,7 @@ class ModelReadTest extends BaseModelTest {
 		$this->assertEquals(2, $result['Writing']['two']);
 
 		$Post->create();
-		$Post->virtualFields = array('other_field' => 'COUNT(Post.id) + 1');
+		$Post->virtualFields = array('other_field' => 'COUNT(Posts.id) + 1');
 		$result = $Post->field('other_field');
 		$this->assertEquals(4, $result);
 	}
@@ -8393,20 +8393,20 @@ class ModelReadTest extends BaseModelTest {
 	public function testVirtualFieldsOrder() {
 		$this->loadFixtures('Post', 'Author');
 		$Post = ClassRegistry::init('Post');
-		$Post->virtualFields = array('other_field' => '10 - Post.id');
+		$Post->virtualFields = array('other_field' => '10 - Posts.id');
 		$result = $Post->find('list', array('order' => array('Post.other_field' => 'ASC')));
 		$expected = array(
-			'3' => 'Third Post',
-			'2' => 'Second Post',
-			'1' => 'First Post'
+			'3' => 'Third Posts',
+			'2' => 'Second Posts',
+			'1' => 'First Posts'
 		);
 		$this->assertEquals($expected, $result);
 
 		$result = $Post->find('list', array('order' => array('Post.other_field' => 'DESC')));
 		$expected = array(
-			'1' => 'First Post',
-			'2' => 'Second Post',
-			'3' => 'Third Post'
+			'1' => 'First Posts',
+			'2' => 'Second Posts',
+			'3' => 'Third Posts'
 		);
 		$this->assertEquals($expected, $result);
 
@@ -8436,8 +8436,8 @@ class ModelReadTest extends BaseModelTest {
 		$Post = ClassRegistry::init('Post');
 		$Post->create();
 		$Post->virtualFields = array(
-			'low_title' => 'lower(Post.title)',
-			'unique_test_field' => 'COUNT(Post.id)',
+			'low_title' => 'lower(Posts.title)',
+			'unique_test_field' => 'COUNT(Posts.id)',
 		);
 		$expectation = array(
 			'Post' => array(
@@ -8504,7 +8504,7 @@ class ModelReadTest extends BaseModelTest {
 	public function testIsVirtualField() {
 		$this->loadFixtures('Post');
 		$Post = ClassRegistry::init('Post');
-		$Post->virtualFields = array('other_field' => 'COUNT(Post.id) + 1');
+		$Post->virtualFields = array('other_field' => 'COUNT(Posts.id) + 1');
 
 		$this->assertTrue($Post->isVirtualField('other_field'));
 		$this->assertTrue($Post->isVirtualField('Post.other_field'));
@@ -8522,7 +8522,7 @@ class ModelReadTest extends BaseModelTest {
 	public function testGetVirtualField() {
 		$this->loadFixtures('Post');
 		$Post = ClassRegistry::init('Post');
-		$Post->virtualFields = array('other_field' => 'COUNT(Post.id) + 1');
+		$Post->virtualFields = array('other_field' => 'COUNT(Posts.id) + 1');
 
 		$this->assertEquals($Post->getVirtualField('other_field'), $Post->virtualFields['other_field']);
 		$this->assertEquals($Post->getVirtualField('Post.other_field'), $Post->virtualFields['other_field']);
@@ -8620,8 +8620,8 @@ class ModelReadTest extends BaseModelTest {
 			array(
 				'Something' => array(
 					'id' => '1',
-					'title' => 'First Post',
-					'body' => 'First Post Body',
+					'title' => 'First Posts',
+					'body' => 'First Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:39:23',
 					'updated' => '2007-03-18 10:41:31'
@@ -8649,8 +8649,8 @@ class ModelReadTest extends BaseModelTest {
 				'SomethingElse' => array(
 					array(
 						'id' => '2',
-						'title' => 'Second Post',
-						'body' => 'Second Post Body',
+						'title' => 'Second Posts',
+						'body' => 'Second Posts Body',
 						'published' => 'Y',
 						'created' => '2007-03-18 10:41:23',
 						'updated' => '2007-03-18 10:43:31',
@@ -8667,8 +8667,8 @@ class ModelReadTest extends BaseModelTest {
 			array(
 				'Something' => array(
 					'id' => '2',
-					'title' => 'Second Post',
-					'body' => 'Second Post Body',
+					'title' => 'Second Posts',
+					'body' => 'Second Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:41:23',
 					'updated' => '2007-03-18 10:43:31'
@@ -8696,8 +8696,8 @@ class ModelReadTest extends BaseModelTest {
 				'SomethingElse' => array(
 					array(
 						'id' => '3',
-						'title' => 'Third Post',
-						'body' => 'Third Post Body',
+						'title' => 'Third Posts',
+						'body' => 'Third Posts Body',
 						'published' => 'Y',
 						'created' => '2007-03-18 10:43:23',
 						'updated' => '2007-03-18 10:45:31',
@@ -8714,8 +8714,8 @@ class ModelReadTest extends BaseModelTest {
 			array(
 				'Something' => array(
 					'id' => '3',
-					'title' => 'Third Post',
-					'body' => 'Third Post Body',
+					'title' => 'Third Posts',
+					'body' => 'Third Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:43:23',
 					'updated' => '2007-03-18 10:45:31'
@@ -8743,8 +8743,8 @@ class ModelReadTest extends BaseModelTest {
 				'SomethingElse' => array(
 					array(
 						'id' => '1',
-						'title' => 'First Post',
-						'body' => 'First Post Body',
+						'title' => 'First Posts',
+						'body' => 'First Posts Body',
 						'published' => 'Y',
 						'created' => '2007-03-18 10:39:23',
 						'updated' => '2007-03-18 10:41:31',
@@ -8782,8 +8782,8 @@ class ModelReadTest extends BaseModelTest {
 				),
 				'SomethingElse' => array(
 					'id' => '2',
-					'title' => 'Second Post',
-					'body' => 'Second Post Body',
+					'title' => 'Second Posts',
+					'body' => 'Second Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:41:23',
 					'updated' => '2007-03-18 10:43:31',
@@ -8802,8 +8802,8 @@ class ModelReadTest extends BaseModelTest {
 				),
 				'SomethingElse' => array(
 					'id' => '3',
-					'title' => 'Third Post',
-					'body' => 'Third Post Body',
+					'title' => 'Third Posts',
+					'body' => 'Third Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:43:23',
 					'updated' => '2007-03-18 10:45:31',
@@ -8822,8 +8822,8 @@ class ModelReadTest extends BaseModelTest {
 				),
 				'SomethingElse' => array(
 					'id' => '1',
-					'title' => 'First Post',
-					'body' => 'First Post Body',
+					'title' => 'First Posts',
+					'body' => 'First Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:39:23',
 					'updated' => '2007-03-18 10:41:31',

@@ -141,7 +141,7 @@ class SqlCompatibleTest extends CakeTestCase {
 			'order' => array('number' => 'ASC')
 		));
 
-		$result = Hash::extract($result, '{n}.Post.title');
+		$result = Hash::extract($result, '{n}.Posts.title');
 		$this->assertEqual($expected, $result);
 
 		$conditions = array(
@@ -158,7 +158,7 @@ class SqlCompatibleTest extends CakeTestCase {
 			'fields' => array('_id', 'title', 'number'),
 			'order' => array('number' => 'ASC')
 		));
-		$result = Hash::extract($result, '{n}.Post.title');
+		$result = Hash::extract($result, '{n}.Posts.title');
 		$this->assertEqual($expected, $result);
 
 		$conditions = array(
@@ -182,7 +182,7 @@ class SqlCompatibleTest extends CakeTestCase {
 			'fields' => array('_id', 'title', 'number'),
 			'order' => array('number' => 'ASC')
 		));
-		$result = Hash::extract($result, '{n}.Post.title');
+		$result = Hash::extract($result, '{n}.Posts.title');
 		$this->assertEqual($expected, $result);
 
 		$conditions = array(
@@ -207,7 +207,7 @@ class SqlCompatibleTest extends CakeTestCase {
 			'fields' => array('_id', 'title', 'number'),
 			'order' => array('number' => 'ASC')
 		));
-		$result = Hash::extract($result, '{n}.Post.title');
+		$result = Hash::extract($result, '{n}.Posts.title');
 		$this->assertEqual($expected, $result);
 
 		$conditions = array(
@@ -234,7 +234,7 @@ class SqlCompatibleTest extends CakeTestCase {
 			'fields' => array('_id', 'title', 'number'),
 			'order' => array('number' => 'ASC')
 		));
-		$result = Hash::extract($result, '{n}.Post.title');
+		$result = Hash::extract($result, '{n}.Posts.title');
 		$this->assertEqual($expected, $result);
 
 		$conditions = array(
@@ -261,7 +261,7 @@ class SqlCompatibleTest extends CakeTestCase {
 			'fields' => array('_id', 'title', 'number'),
 			'order' => array('number' => 'ASC')
 		));
-		$result = Hash::extract($result, '{n}.Post.title');
+		$result = Hash::extract($result, '{n}.Posts.title');
 		$this->assertEqual($expected, $result);
 
 		$conditions = array(
@@ -296,7 +296,7 @@ class SqlCompatibleTest extends CakeTestCase {
 		$result = $this->Post->find('all', $params);
 
 		$expected = array('A11','A12');
-		$result = Hash::extract($result, '{n}.Post._id');
+		$result = Hash::extract($result, '{n}.Posts._id');
 		$this->assertEqual($expected, $result);
 		$this->assertEqual(2, count($result));
 
@@ -311,7 +311,7 @@ class SqlCompatibleTest extends CakeTestCase {
 		$params = array('conditions' => array('_id' => array('$nin' => array('A11', 'A12'))));
 		$result = $this->Post->find('all', $params);
 		//$expected = array('A13','A14');
-		$result = Hash::extract($result, '{n}.Post._id');
+		$result = Hash::extract($result, '{n}.Posts._id');
 		$this->assertTrue(in_array('A13', $result));
 		$this->assertFalse(in_array('A11', $result));
 		$this->assertFalse(in_array('A12', $result));
@@ -340,7 +340,7 @@ class SqlCompatibleTest extends CakeTestCase {
 			'fields' => array('_id', 'title'),
 			'order' => array('title DESC')
 		));
-		$result = Hash::extract($result, '{n}.Post.title');
+		$result = Hash::extract($result, '{n}.Posts.title');
 		$this->assertEqual($expected, $result);
 
 		$order = array(array('title' => 'DESC'));
@@ -360,7 +360,7 @@ class SqlCompatibleTest extends CakeTestCase {
 			'fields' => array('_id', 'title'),
 			'order' => array('title ASC')
 		));
-		$result = Hash::extract($result, '{n}.Post.title');
+		$result = Hash::extract($result, '{n}.Posts.title');
 		$this->assertEqual($expected, $result);
 
 		$order = array(array('title' => 'ASC'));
@@ -381,7 +381,7 @@ class SqlCompatibleTest extends CakeTestCase {
 			'fields' => array('_id', 'title'),
 			'order' => array('Post.title DESC')
 		));
-		$result = Hash::extract($result, '{n}.Post.title');
+		$result = Hash::extract($result, '{n}.Posts.title');
 		$this->assertEqual($expected, $result);
 	}
 

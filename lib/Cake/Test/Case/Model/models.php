@@ -915,7 +915,7 @@ class Home extends CakeTestModel {
 }
 
 /**
- * Post class
+ * Posts class
  *
  * @package       Cake.Test.Case.Model
  */

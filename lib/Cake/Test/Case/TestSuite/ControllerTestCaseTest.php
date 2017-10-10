@@ -410,7 +410,7 @@ class ControllerTestCaseTest extends CakeTestCase {
 
 		$data = array(
 			'Post' => array(
-				'name' => 'Some Post'
+				'name' => 'Some Posts'
 			)
 		);
 		$this->Case->testAction('/tests_apps_posts/post_var', array(

@@ -356,26 +356,26 @@ class HashTest extends CakeTestCase {
 
 		$data = array(
 			array(
-				'Post' => array('id' => '1', 'author_id' => '1', 'title' => 'First Post'),
+				'Post' => array('id' => '1', 'author_id' => '1', 'title' => 'First Posts'),
 				'Author' => array('id' => '1', 'user' => 'nate', 'password' => 'foo'),
 			),
 			array(
-				'Post' => array('id' => '2', 'author_id' => '3', 'title' => 'Second Post', 'body' => 'Second Post Body'),
+				'Post' => array('id' => '2', 'author_id' => '3', 'title' => 'Second Posts', 'body' => 'Second Posts Body'),
 				'Author' => array('id' => '3', 'user' => 'larry', 'password' => null),
 			)
 		);
 		$result = Hash::flatten($data);
 		$expected = array(
-			'0.Post.id' => '1',
-			'0.Post.author_id' => '1',
-			'0.Post.title' => 'First Post',
+			'0.Posts.id' => '1',
+			'0.Posts.author_id' => '1',
+			'0.Posts.title' => 'First Posts',
 			'0.Author.id' => '1',
 			'0.Author.user' => 'nate',
 			'0.Author.password' => 'foo',
-			'1.Post.id' => '2',
-			'1.Post.author_id' => '3',
-			'1.Post.title' => 'Second Post',
-			'1.Post.body' => 'Second Post Body',
+			'1.Posts.id' => '2',
+			'1.Posts.author_id' => '3',
+			'1.Posts.title' => 'Second Posts',
+			'1.Posts.body' => 'Second Posts Body',
 			'1.Author.id' => '3',
 			'1.Author.user' => 'larry',
 			'1.Author.password' => null
@@ -384,15 +384,15 @@ class HashTest extends CakeTestCase {
 
 		$data = array(
 			array(
-				'Post' => array('id' => '1', 'author_id' => null, 'title' => 'First Post'),
+				'Post' => array('id' => '1', 'author_id' => null, 'title' => 'First Posts'),
 				'Author' => array(),
 			)
 		);
 		$result = Hash::flatten($data);
 		$expected = array(
-			'0.Post.id' => '1',
-			'0.Post.author_id' => null,
-			'0.Post.title' => 'First Post',
+			'0.Posts.id' => '1',
+			'0.Posts.author_id' => null,
+			'0.Posts.title' => 'First Posts',
 			'0.Author' => array()
 		);
 		$this->assertEquals($expected, $result);
@@ -403,8 +403,8 @@ class HashTest extends CakeTestCase {
 		);
 		$result = Hash::flatten($data, '/');
 		$expected = array(
-			'0/Post/id' => '1',
-			'1/Post/id' => '2',
+			'0/Posts/id' => '1',
+			'1/Posts/id' => '2',
 		);
 		$this->assertEquals($expected, $result);
 	}
@@ -2603,27 +2603,27 @@ class HashTest extends CakeTestCase {
 		$this->assertEquals($data, $result);
 
 		$data = array(
-			'0.Post.id' => '1', '0.Post.author_id' => '1', '0.Post.title' => 'First Post', '0.Author.id' => '1',
-			'0.Author.user' => 'nate', '0.Author.password' => 'foo', '1.Post.id' => '2', '1.Post.author_id' => '3',
-			'1.Post.title' => 'Second Post', '1.Post.body' => 'Second Post Body', '1.Author.id' => '3',
+			'0.Posts.id' => '1', '0.Posts.author_id' => '1', '0.Posts.title' => 'First Posts', '0.Author.id' => '1',
+			'0.Author.user' => 'nate', '0.Author.password' => 'foo', '1.Posts.id' => '2', '1.Posts.author_id' => '3',
+			'1.Posts.title' => 'Second Posts', '1.Posts.body' => 'Second Posts Body', '1.Author.id' => '3',
 			'1.Author.user' => 'larry', '1.Author.password' => null
 		);
 		$result = Hash::expand($data);
 		$expected = array(
 			array(
-				'Post' => array('id' => '1', 'author_id' => '1', 'title' => 'First Post'),
+				'Post' => array('id' => '1', 'author_id' => '1', 'title' => 'First Posts'),
 				'Author' => array('id' => '1', 'user' => 'nate', 'password' => 'foo'),
 			),
 			array(
-				'Post' => array('id' => '2', 'author_id' => '3', 'title' => 'Second Post', 'body' => 'Second Post Body'),
+				'Post' => array('id' => '2', 'author_id' => '3', 'title' => 'Second Posts', 'body' => 'Second Posts Body'),
 				'Author' => array('id' => '3', 'user' => 'larry', 'password' => null),
 			)
 		);
 		$this->assertEquals($expected, $result);
 
 		$data = array(
-			'0/Post/id' => 1,
-			'0/Post/name' => 'test post'
+			'0/Posts/id' => 1,
+			'0/Posts/name' => 'test post'
 		);
 		$result = Hash::expand($data, '/');
 		$expected = array(

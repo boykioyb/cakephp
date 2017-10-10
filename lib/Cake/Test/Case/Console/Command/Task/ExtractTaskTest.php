@@ -387,16 +387,16 @@ class ExtractTaskTest extends CakeTestCase {
 		$pattern = preg_quote('#Model/PersisterOne.php:validation for field body#', '\\');
 		$this->assertRegExp($pattern, $result);
 
-		$pattern = '#msgid "Post title is required"#';
+		$pattern = '#msgid "Posts title is required"#';
 		$this->assertRegExp($pattern, $result);
 
 		$pattern = '#msgid "You may enter up to %s chars \(minimum is %s chars\)"#';
 		$this->assertRegExp($pattern, $result);
 
-		$pattern = '#msgid "Post body is required"#';
+		$pattern = '#msgid "Posts body is required"#';
 		$this->assertRegExp($pattern, $result);
 
-		$pattern = '#msgid "Post body is super required"#';
+		$pattern = '#msgid "Posts body is super required"#';
 		$this->assertRegExp($pattern, $result);
 
 		$this->assertContains('msgid "double \\"quoted\\" validation"', $result, 'Strings with quotes not handled correctly');
@@ -436,13 +436,13 @@ class ExtractTaskTest extends CakeTestCase {
 		$pattern = preg_quote('#Plugin/TestPlugin/Model/TestPluginPost.php:validation for field body#', '\\');
 		$this->assertRegExp($pattern, $result);
 
-		$pattern = '#msgid "Post title is required"#';
+		$pattern = '#msgid "Posts title is required"#';
 		$this->assertRegExp($pattern, $result);
 
-		$pattern = '#msgid "Post body is required"#';
+		$pattern = '#msgid "Posts body is required"#';
 		$this->assertRegExp($pattern, $result);
 
-		$pattern = '#msgid "Post body is super required"#';
+		$pattern = '#msgid "Posts body is super required"#';
 		$this->assertRegExp($pattern, $result);
 	}
 
@@ -475,13 +475,13 @@ class ExtractTaskTest extends CakeTestCase {
 		$pattern = preg_quote('#Model/TestPluginPost.php:validation for field body#', '\\');
 		$this->assertRegExp($pattern, $result);
 
-		$pattern = '#msgid "Post title is required"#';
+		$pattern = '#msgid "Posts title is required"#';
 		$this->assertRegExp($pattern, $result);
 
-		$pattern = '#msgid "Post body is required"#';
+		$pattern = '#msgid "Posts body is required"#';
 		$this->assertRegExp($pattern, $result);
 
-		$pattern = '#msgid "Post body is super required"#';
+		$pattern = '#msgid "Posts body is super required"#';
 		$this->assertRegExp($pattern, $result);
 
 		$pattern = '#Plugin/TestPlugin/Model/TestPluginPost.php:validation for field title#';

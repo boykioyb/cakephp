@@ -1482,8 +1482,8 @@ class PaginatorComponentTest extends CakeTestCase {
 		);
 		$result = $Controller->paginate();
 		$expected = array(
-			1 => 'First Post',
-			2 => 'Second Post',
+			1 => 'First Posts',
+			2 => 'Second Posts',
 		);
 		$this->assertEquals($expected, $result);
 		$result = $Controller->params['paging']['PaginatorCustomPost'];
@@ -1514,8 +1514,8 @@ class PaginatorComponentTest extends CakeTestCase {
 		);
 		$result = $Controller->paginate();
 		$expected = array(
-			1 => 'First Post',
-			2 => 'Second Post',
+			1 => 'First Posts',
+			2 => 'Second Posts',
 		);
 		$this->assertEquals($expected, $result);
 		$result = $Controller->params['paging']['PaginatorCustomPost'];

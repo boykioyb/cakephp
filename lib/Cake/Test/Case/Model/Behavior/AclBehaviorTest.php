@@ -261,7 +261,7 @@ class AclBehaviorTest extends CakeTestCase {
 		$data = array(
 			'Post' => array(
 				'author_id' => 1,
-				'title' => 'Acl Post',
+				'title' => 'Acl Posts',
 				'body' => 'post body',
 				'published' => 1
 			),

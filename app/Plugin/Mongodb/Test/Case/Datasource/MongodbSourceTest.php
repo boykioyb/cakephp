@@ -25,7 +25,7 @@ App::uses('MongodbSource', 'Mongodb.Model/Datasource');
 
 
 /**
- * Post Model for the test
+ * Posts Model for the test
  *
  * @package       app
  * @subpackage    app.model.post
@@ -1410,28 +1410,28 @@ class MongodbSourceTest extends CakeTestCase {
 			'fields' => array('_id', 'title'),
 			'order' => array('title' => 1)
 		));
-		$result = Hash::extract($result, '{n}.Post.title');
+		$result = Hash::extract($result, '{n}.Posts.title');
 
 		$this->assertEqual($expected, $result);
 		$result = $this->Post->find('all', array(
 			'fields' => array('_id', 'title'),
 			'order' => array('title' => 'ASC')
 		));
-		$result = Hash::extract($result, '{n}.Post.title');
+		$result = Hash::extract($result, '{n}.Posts.title');
 
 		$expected = array_reverse($expected);
 		$result = $this->Post->find('all', array(
 			'fields' => array('_id', 'title'),
 			'order' => array('title' => '-1')
 		));
-		$result = Hash::extract($result, '{n}.Post.title');
+		$result = Hash::extract($result, '{n}.Posts.title');
 		$this->assertEqual($expected, $result);
 
 		$result = $this->Post->find('all', array(
 			'fields' => array('_id', 'title'),
 			'order' => array('title' => 'DESC')
 		));
-		$result = Hash::extract($result, '{n}.Post.title');
+		$result = Hash::extract($result, '{n}.Posts.title');
 		$this->assertEqual($expected, $result);
 	}
 

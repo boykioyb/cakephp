@@ -2,37 +2,33 @@
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 
 /**
- * PostController
+ * PostsController
  * Author: Hoa de Nhat
- * Create: 05/09/2017
+ * Created: 05/09/2017
  */
-class PostController extends AppController
+class PostsController extends AppController
 {
-    public $helpers = array('Html', 'Form');
+    public $helpers = array('Html', 'Form', 'Minify.Minify');
 
-    /*public function index()
-    {
-        $this->set('posts', $this->Post->find('all'));
-    }*/
     public function index()
     {
         $mongo = $this->Post;
         if ($this->request->is('post')) {
-            $dateStart = $this->request->data['start'];
-            $dateEnd   = $this->request->data['end'];
-            $start     = new MongoDate(strtotime($dateStart));
-            $end       = new MongoDate(strtotime($dateEnd));
-            $condion   = array(
+            $dateStart  = $this->request->data['start'];
+            $dateEnd    = $this->request->data['end'];
+            $start      = new MongoDate(strtotime($dateStart));
+            $end        = new MongoDate(strtotime($dateEnd));
+            $options = array(
                 'conditions' => array(
                     'Post.created' => array(
                         '$gte' => $start,
                         '$lt'  => $end
                     )
                 ));
-            $por       = $mongo->find('all', $condion);
-            $this->set('posts', $por);
+            $results    = $mongo->find('all', $options);
+            $this->set('posts', $results);
             $this->set('dateStart', $dateStart);
-            $this->set('dateEnd ', $dateEnd);
+            $this->set('dateEnd', $dateEnd);
         } else {
             $results = $mongo->find('all');
             $this->set('posts', $results);
@@ -78,7 +74,7 @@ class PostController extends AppController
         if ($this->request->is(array('post', 'put'))) {
             $this->Post->id = $id;
             if ($this->Post->save($this->request->data)) {
-                $this->Flash->success(__('Post edit .'));
+                $this->Flash->success(__('Posts edit .'));
                 return $this->redirect(array('action' => 'index'));
             }
             $this->Flash->error(__('Unable to update your post.'));
@@ -126,27 +122,5 @@ class PostController extends AppController
         }
     }
 
-    public function find()
-    {
-        $mongo   = $this->Post;
-        $start   = new MongoDate(strtotime($this->request->data['start']));
-        $end     = new MongoDate(strtotime($this->request->data['end']));
-        $condion = array(
-            'conditions' => array(
-                'Post.created' => array(
-                    '$gte' => $start,
-                    '$lt'  => $end
-                )
-            ));
-        $por     = $mongo->find('all', $condion);
-
-        $this->render(false);
-//        debug($por);die();
-        $member = array('username' => 'phucvh'
-        , 'password'               => '123456'
-        , 'email'                  => 'ahoangphuc@gmail.com');
-        echo(json_encode($por));
-
-    }
 }
 

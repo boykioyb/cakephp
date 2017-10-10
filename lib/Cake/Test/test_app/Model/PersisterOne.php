@@ -35,7 +35,7 @@ class PersisterOne extends AppModel {
 				'rule' => array('custom', '.*'),
 				'allowEmpty' => true,
 				'required' => false,
-				'message' => 'Post title is required'
+				'message' => 'Posts title is required'
 			),
 			'between' => array(
 				'rule' => array('lengthBetween', 5, 15),
@@ -47,13 +47,13 @@ class PersisterOne extends AppModel {
 				'rule' => array('custom', '.*'),
 				'allowEmpty' => true,
 				'required' => false,
-				'message' => 'Post body is required'
+				'message' => 'Posts body is required'
 			),
 			'second_rule' => array(
 				'rule' => array('custom', '.*'),
 				'allowEmpty' => true,
 				'required' => false,
-				'message' => 'Post body is super required'
+				'message' => 'Posts body is super required'
 			)
 		),
 	);

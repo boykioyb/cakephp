@@ -8365,7 +8365,7 @@ class FormHelperTest extends CakeTestCase {
 				'label' => array('for' => 'PostContent'),
 					'Current Text',
 				'/label',
-				'textarea' => array('name' => 'data[Post][content]', 'id' => 'PostContent', 'rows' => '15', 'cols' => '75'),
+				'textarea' => array('name' => 'data[Posts][content]', 'id' => 'PostContent', 'rows' => '15', 'cols' => '75'),
 				'GREAT®',
 				'/textarea',
 			'/div'

@@ -12,7 +12,7 @@
                     echo $this->Form->input('title', ['class' => 'form-control']);
                     echo $this->Form->input('body', array('rows' => '3','class' => 'form-control'));
                     echo $this->Form->input('id', array('type' => 'hidden'));
-                    echo $this->Form->button('Save Post',['class'=>'btn btn-success','style'=>'margin-top:20px']);
+                    echo $this->Form->button('Save Posts',['class'=>'btn btn-success','style'=>'margin-top:20px']);
 
                     ?>
                 </div>

@@ -7,7 +7,11 @@
                 </div>
                 <div class="box-body">
                     <p>
-                        <small>Created: <?php echo $post['Post']['created']; ?></small>
+                        <?php
+                        $date = $post['Post']['created'];
+                        $fixed = date('d-m-Y', $date->sec);
+                        ?>
+                        <small>Created: <?= $fixed; ?></small>
                     </p>
                     <p><?php echo h($post['Post']['body']); ?></p>
                 </div>

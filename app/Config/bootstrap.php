@@ -67,6 +67,7 @@ Cache::config('default', array('engine' => 'File'));
  * CakePlugin::load('DebugKit'); // Loads a single plugin named DebugKit
  */
 CakePlugin::loadAll(); 
+CakePlugin::load(array('Minify' => array('routes' => true)));
 /**
  * To prefer app translation over plugin translation, you can set
  *

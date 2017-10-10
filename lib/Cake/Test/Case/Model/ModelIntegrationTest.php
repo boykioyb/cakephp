@@ -1736,8 +1736,8 @@ class ModelIntegrationTest extends BaseModelTest {
 			array(
 				'SomethingElse' => array(
 					'id' => '1',
-					'title' => 'First Post',
-					'body' => 'First Post Body',
+					'title' => 'First Posts',
+					'body' => 'First Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:39:23',
 					'updated' => '2007-03-18 10:41:31',
@@ -1746,8 +1746,8 @@ class ModelIntegrationTest extends BaseModelTest {
 				'Something' => array(
 					array(
 						'id' => '3',
-						'title' => 'Third Post',
-						'body' => 'Third Post Body',
+						'title' => 'Third Posts',
+						'body' => 'Third Posts Body',
 						'published' => 'Y',
 						'created' => '2007-03-18 10:43:23',
 						'updated' => '2007-03-18 10:45:31',
@@ -1763,8 +1763,8 @@ class ModelIntegrationTest extends BaseModelTest {
 			array(
 				'SomethingElse' => array(
 					'id' => '2',
-					'title' => 'Second Post',
-					'body' => 'Second Post Body',
+					'title' => 'Second Posts',
+					'body' => 'Second Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:41:23',
 					'updated' => '2007-03-18 10:43:31',
@@ -1773,8 +1773,8 @@ class ModelIntegrationTest extends BaseModelTest {
 				'Something' => array(
 					array(
 						'id' => '1',
-						'title' => 'First Post',
-						'body' => 'First Post Body',
+						'title' => 'First Posts',
+						'body' => 'First Posts Body',
 						'published' => 'Y',
 						'created' => '2007-03-18 10:39:23',
 						'updated' => '2007-03-18 10:41:31',
@@ -1790,8 +1790,8 @@ class ModelIntegrationTest extends BaseModelTest {
 			array(
 				'SomethingElse' => array(
 					'id' => '3',
-					'title' => 'Third Post',
-					'body' => 'Third Post Body',
+					'title' => 'Third Posts',
+					'body' => 'Third Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:43:23',
 					'updated' => '2007-03-18 10:45:31',
@@ -1800,8 +1800,8 @@ class ModelIntegrationTest extends BaseModelTest {
 				'Something' => array(
 					array(
 						'id' => '2',
-						'title' => 'Second Post',
-						'body' => 'Second Post Body',
+						'title' => 'Second Posts',
+						'body' => 'Second Posts Body',
 						'published' => 'Y',
 						'created' => '2007-03-18 10:41:23',
 						'updated' => '2007-03-18 10:43:31',
@@ -1821,8 +1821,8 @@ class ModelIntegrationTest extends BaseModelTest {
 			array(
 				'Something' => array(
 					'id' => '1',
-					'title' => 'First Post',
-					'body' => 'First Post Body',
+					'title' => 'First Posts',
+					'body' => 'First Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:39:23',
 					'updated' => '2007-03-18 10:41:31'
@@ -1830,8 +1830,8 @@ class ModelIntegrationTest extends BaseModelTest {
 				'SomethingElse' => array(
 					array(
 						'id' => '2',
-						'title' => 'Second Post',
-						'body' => 'Second Post Body',
+						'title' => 'Second Posts',
+						'body' => 'Second Posts Body',
 						'published' => 'Y',
 						'created' => '2007-03-18 10:41:23',
 						'updated' => '2007-03-18 10:43:31',
@@ -1846,8 +1846,8 @@ class ModelIntegrationTest extends BaseModelTest {
 			array(
 				'Something' => array(
 					'id' => '2',
-					'title' => 'Second Post',
-					'body' => 'Second Post Body',
+					'title' => 'Second Posts',
+					'body' => 'Second Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:41:23',
 					'updated' => '2007-03-18 10:43:31'
@@ -1855,8 +1855,8 @@ class ModelIntegrationTest extends BaseModelTest {
 				'SomethingElse' => array(
 					array(
 						'id' => '3',
-						'title' => 'Third Post',
-						'body' => 'Third Post Body',
+						'title' => 'Third Posts',
+						'body' => 'Third Posts Body',
 						'published' => 'Y',
 						'created' => '2007-03-18 10:43:23',
 						'updated' => '2007-03-18 10:45:31',
@@ -1871,8 +1871,8 @@ class ModelIntegrationTest extends BaseModelTest {
 			array(
 				'Something' => array(
 					'id' => '3',
-					'title' => 'Third Post',
-					'body' => 'Third Post Body',
+					'title' => 'Third Posts',
+					'body' => 'Third Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:43:23',
 					'updated' => '2007-03-18 10:45:31'
@@ -1880,8 +1880,8 @@ class ModelIntegrationTest extends BaseModelTest {
 				'SomethingElse' => array(
 					array(
 						'id' => '1',
-						'title' => 'First Post',
-						'body' => 'First Post Body',
+						'title' => 'First Posts',
+						'body' => 'First Posts Body',
 						'published' => 'Y',
 						'created' => '2007-03-18 10:39:23',
 						'updated' => '2007-03-18 10:41:31',
@@ -1899,8 +1899,8 @@ class ModelIntegrationTest extends BaseModelTest {
 		$expected = array(
 			'Something' => array(
 				'id' => '1',
-				'title' => 'First Post',
-				'body' => 'First Post Body',
+				'title' => 'First Posts',
+				'body' => 'First Posts Body',
 				'published' => 'Y',
 				'created' => '2007-03-18 10:39:23',
 				'updated' => '2007-03-18 10:41:31'
@@ -1908,8 +1908,8 @@ class ModelIntegrationTest extends BaseModelTest {
 			'SomethingElse' => array(
 				array(
 					'id' => '2',
-					'title' => 'Second Post',
-					'body' => 'Second Post Body',
+					'title' => 'Second Posts',
+					'body' => 'Second Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:41:23',
 					'updated' => '2007-03-18 10:43:31',
@@ -1944,16 +1944,16 @@ class ModelIntegrationTest extends BaseModelTest {
 		$expected = array(
 			'Something' => array(
 				'id' => '1',
-				'title' => 'First Post',
-				'body' => 'First Post Body',
+				'title' => 'First Posts',
+				'body' => 'First Posts Body',
 				'published' => 'Y',
 				'created' => '2007-03-18 10:39:23'
 			),
 			'SomethingElse' => array(
 				array(
 					'id' => '1',
-					'title' => 'First Post',
-					'body' => 'First Post Body',
+					'title' => 'First Posts',
+					'body' => 'First Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:39:23',
 					'updated' => '2007-03-18 10:41:31',
@@ -1967,8 +1967,8 @@ class ModelIntegrationTest extends BaseModelTest {
 			),
 				array(
 					'id' => '2',
-					'title' => 'Second Post',
-					'body' => 'Second Post Body',
+					'title' => 'Second Posts',
+					'body' => 'Second Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:41:23',
 					'updated' => '2007-03-18 10:43:31',
@@ -1982,8 +1982,8 @@ class ModelIntegrationTest extends BaseModelTest {
 			),
 				array(
 					'id' => '3',
-					'title' => 'Third Post',
-					'body' => 'Third Post Body',
+					'title' => 'Third Posts',
+					'body' => 'Third Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:43:23',
 					'updated' => '2007-03-18 10:45:31',

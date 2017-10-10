@@ -2533,7 +2533,7 @@ class DboSource extends DataSource {
 	}
 
 /**
- * Returns a key formatted like a string Model.fieldname(i.e. Post.title, or Country.name)
+ * Returns a key formatted like a string Model.fieldname(i.e. Posts.title, or Country.name)
  *
  * @param Model $Model The model to get a key for.
  * @param string $key The key field.
@@ -3025,7 +3025,7 @@ class DboSource extends DataSource {
 /**
  * Returns an ORDER BY clause as a string.
  *
- * @param array|string $keys Field reference, as a key (i.e. Post.title)
+ * @param array|string $keys Field reference, as a key (i.e. Posts.title)
  * @param string $direction Direction (ASC or DESC)
  * @param Model $Model Model reference (used to look for virtual field)
  * @return string ORDER BY clause

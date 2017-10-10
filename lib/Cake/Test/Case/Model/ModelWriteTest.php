@@ -470,7 +470,7 @@ class ModelWriteTest extends BaseModelTest {
 		$model->getEventManager()->attach($callback, 'Model.afterSave');
 		$data = array(
 			'title' => 'New post',
-			'body' => 'Post body',
+			'body' => 'Posts body',
 			'author_id' => 1
 		);
 		$result = $model->save($data);
@@ -535,7 +535,7 @@ class ModelWriteTest extends BaseModelTest {
 		$Post = new CounterCachePost();
 		$data = array('Post' => array(
 			'id' => 22,
-			'title' => 'New Post',
+			'title' => 'New Posts',
 			'user_id' => 66
 		));
 
@@ -714,7 +714,7 @@ class ModelWriteTest extends BaseModelTest {
 		// Count Increase
 		$data = array('Post' => array(
 			'id' => 22,
-			'title' => 'New Post',
+			'title' => 'New Posts',
 			'user_id' => 66,
 			'published' => true
 		));
@@ -903,7 +903,7 @@ class ModelWriteTest extends BaseModelTest {
 		$data = array(
 			'Post' => array(
 				'author_id' => 1,
-				'title' => 'New Fourth Post'
+				'title' => 'New Fourth Posts'
 			)
 		);
 		$Post->save($data, array('atomic' => true));
@@ -932,7 +932,7 @@ class ModelWriteTest extends BaseModelTest {
 		$result = $TestModel->save($data);
 		$this->assertTrue((bool)$result);
 
-		// force transaction to be rolled back in Post model
+		// force transaction to be rolled back in Posts model
 		$event->stopPropagation();
 		return false;
 	}
@@ -950,8 +950,8 @@ class ModelWriteTest extends BaseModelTest {
 
 		$PostModel->validate = array('title' => 'notBlank');
 		$data = array(
-			array('author_id' => 1, 'title' => 'New Fourth Post'),
-			array('author_id' => 1, 'title' => 'New Fifth Post'),
+			array('author_id' => 1, 'title' => 'New Fourth Posts'),
+			array('author_id' => 1, 'title' => 'New Fifth Posts'),
 			array('author_id' => 1, 'title' => '')
 		);
 		$this->assertFalse($PostModel->saveAll($data));
@@ -962,8 +962,8 @@ class ModelWriteTest extends BaseModelTest {
 				'Post' => array(
 					'id' => '1',
 					'author_id' => 1,
-					'title' => 'First Post',
-					'body' => 'First Post Body',
+					'title' => 'First Posts',
+					'body' => 'First Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:39:23',
 					'updated' => '2007-03-18 10:41:31'
@@ -973,8 +973,8 @@ class ModelWriteTest extends BaseModelTest {
 				'Post' => array(
 					'id' => '2',
 					'author_id' => 3,
-					'title' => 'Second Post',
-					'body' => 'Second Post Body',
+					'title' => 'Second Posts',
+					'body' => 'Second Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:41:23',
 					'updated' => '2007-03-18 10:43:31'
@@ -984,8 +984,8 @@ class ModelWriteTest extends BaseModelTest {
 				'Post' => array(
 					'id' => '3',
 					'author_id' => 1,
-					'title' => 'Third Post',
-					'body' => 'Third Post Body',
+					'title' => 'Third Posts',
+					'body' => 'Third Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:43:23',
 					'updated' => '2007-03-18 10:45:31'
@@ -1002,7 +1002,7 @@ class ModelWriteTest extends BaseModelTest {
 		$data = array(
 			'Post' => array(
 				'author_id' => 1,
-				'title' => 'New Fourth Post'
+				'title' => 'New Fourth Posts'
 			)
 		);
 
@@ -3232,7 +3232,7 @@ class ModelWriteTest extends BaseModelTest {
 
 		$TestModel->saveAll(array(
 			'Post' => array(
-				'title' => 'Post with Author',
+				'title' => 'Posts with Author',
 				'body' => 'This post will be saved with an author'
 			),
 			'Author' => array(
@@ -3245,7 +3245,7 @@ class ModelWriteTest extends BaseModelTest {
 			'Post' => array(
 				'id' => '4',
 				'author_id' => '5',
-				'title' => 'Post with Author',
+				'title' => 'Posts with Author',
 				'body' => 'This post will be saved with an author',
 				'published' => 'N'
 			),
@@ -3562,7 +3562,7 @@ class ModelWriteTest extends BaseModelTest {
 
 		$result = $TestModel->saveAll(array(
 			'Article' => array(
-				'title' => 'Post with Author',
+				'title' => 'Posts with Author',
 				'body' => 'This post will be saved with an author',
 				'user_id' => 2
 			),
@@ -3575,7 +3575,7 @@ class ModelWriteTest extends BaseModelTest {
 		$result = $TestModel->saveAll(array(
 			array(
 				'id' => '1',
-				'title' => 'Baleeted First Post',
+				'title' => 'Baleeted First Posts',
 				'body' => 'Baleeted!',
 				'published' => 'N'
 			),
@@ -3614,7 +3614,7 @@ class ModelWriteTest extends BaseModelTest {
 		$result = $TestModel->saveAll(array(
 			array(
 				'id' => '1',
-				'title' => 'Un-Baleeted First Post',
+				'title' => 'Un-Baleeted First Posts',
 				'body' => 'Not Baleeted!',
 				'published' => 'Y'
 			),
@@ -4581,7 +4581,7 @@ class ModelWriteTest extends BaseModelTest {
 		$Post->setDataSourceObject($db);
 
 		$data = array(
-			array('author_id' => 1, 'title' => 'New Fourth Post'),
+			array('author_id' => 1, 'title' => 'New Fourth Posts'),
 			array('author_id' => 1, 'title' => '')
 		);
 		$Post->saveAll($data, array('atomic' => true, 'validate' => true));
@@ -4595,8 +4595,8 @@ class ModelWriteTest extends BaseModelTest {
 		$Post->setDataSourceObject($db);
 
 		$data = array(
-			array('author_id' => 1, 'title' => 'New Fourth Post'),
-			array('author_id' => 1, 'title' => 'New Fifth Post', 'body' => $db->expression('PDO_EXCEPTION()'))
+			array('author_id' => 1, 'title' => 'New Fourth Posts'),
+			array('author_id' => 1, 'title' => 'New Fifth Posts', 'body' => $db->expression('PDO_EXCEPTION()'))
 		);
 
 		try {
@@ -4614,8 +4614,8 @@ class ModelWriteTest extends BaseModelTest {
 		$Post->setDataSourceObject($db);
 
 		$data = array(
-			array('author_id' => 1, 'title' => 'New Fourth Post'),
-			array('author_id' => 1, 'title' => 'New Fifth Post')
+			array('author_id' => 1, 'title' => 'New Fourth Posts'),
+			array('author_id' => 1, 'title' => 'New Fifth Posts')
 		);
 		$Post->saveAll($data, array('atomic' => true, 'validate' => true));
 	}
@@ -4732,8 +4732,8 @@ class ModelWriteTest extends BaseModelTest {
 
 		$TestModel->validate = array('title' => 'notBlank');
 		$data = array(
-			array('author_id' => 1, 'title' => 'New Fourth Post'),
-			array('author_id' => 1, 'title' => 'New Fifth Post'),
+			array('author_id' => 1, 'title' => 'New Fourth Posts'),
+			array('author_id' => 1, 'title' => 'New Fifth Posts'),
 			array('author_id' => 1, 'title' => '')
 		);
 		$this->assertFalse($TestModel->saveAll($data));
@@ -4743,8 +4743,8 @@ class ModelWriteTest extends BaseModelTest {
 			array('Post' => array(
 				'id' => '1',
 				'author_id' => 1,
-				'title' => 'First Post',
-				'body' => 'First Post Body',
+				'title' => 'First Posts',
+				'body' => 'First Posts Body',
 				'published' => 'Y',
 				'created' => '2007-03-18 10:39:23',
 				'updated' => '2007-03-18 10:41:31'
@@ -4752,8 +4752,8 @@ class ModelWriteTest extends BaseModelTest {
 			array('Post' => array(
 				'id' => '2',
 				'author_id' => 3,
-				'title' => 'Second Post',
-				'body' => 'Second Post Body',
+				'title' => 'Second Posts',
+				'body' => 'Second Posts Body',
 				'published' => 'Y',
 				'created' => '2007-03-18 10:41:23',
 				'updated' => '2007-03-18 10:43:31'
@@ -4761,8 +4761,8 @@ class ModelWriteTest extends BaseModelTest {
 			array('Post' => array(
 				'id' => '3',
 				'author_id' => 1,
-				'title' => 'Third Post',
-				'body' => 'Third Post Body',
+				'title' => 'Third Posts',
+				'body' => 'Third Posts Body',
 				'published' => 'Y',
 				'created' => '2007-03-18 10:43:23',
 				'updated' => '2007-03-18 10:45:31'
@@ -4774,7 +4774,7 @@ class ModelWriteTest extends BaseModelTest {
 				'Post' => array(
 					'id' => '4',
 					'author_id' => 1,
-					'title' => 'New Fourth Post',
+					'title' => 'New Fourth Posts',
 					'body' => null,
 					'published' => 'N',
 					'created' => static::date(),
@@ -4785,7 +4785,7 @@ class ModelWriteTest extends BaseModelTest {
 				'Post' => array(
 					'id' => '5',
 					'author_id' => 1,
-					'title' => 'New Fifth Post',
+					'title' => 'New Fifth Posts',
 					'body' => null,
 					'published' => 'N',
 					'created' => static::date(),
@@ -4800,9 +4800,9 @@ class ModelWriteTest extends BaseModelTest {
 		$this->assertEquals($expected, $result);
 
 		$data = array(
-			array('author_id' => 1, 'title' => 'New Fourth Post'),
+			array('author_id' => 1, 'title' => 'New Fourth Posts'),
 			array('author_id' => 1, 'title' => ''),
-			array('author_id' => 1, 'title' => 'New Sixth Post')
+			array('author_id' => 1, 'title' => 'New Sixth Posts')
 		);
 		$this->assertFalse($TestModel->saveAll($data));
 
@@ -4811,8 +4811,8 @@ class ModelWriteTest extends BaseModelTest {
 			array('Post' => array(
 				'id' => '1',
 				'author_id' => 1,
-				'title' => 'First Post',
-				'body' => 'First Post Body',
+				'title' => 'First Posts',
+				'body' => 'First Posts Body',
 				'published' => 'Y',
 				'created' => '2007-03-18 10:39:23',
 				'updated' => '2007-03-18 10:41:31'
@@ -4820,8 +4820,8 @@ class ModelWriteTest extends BaseModelTest {
 			array('Post' => array(
 				'id' => '2',
 				'author_id' => 3,
-				'title' => 'Second Post',
-				'body' => 'Second Post Body',
+				'title' => 'Second Posts',
+				'body' => 'Second Posts Body',
 				'published' => 'Y',
 				'created' => '2007-03-18 10:41:23',
 				'updated' => '2007-03-18 10:43:31'
@@ -4829,8 +4829,8 @@ class ModelWriteTest extends BaseModelTest {
 			array('Post' => array(
 				'id' => '3',
 				'author_id' => 1,
-				'title' => 'Third Post',
-				'body' => 'Third Post Body',
+				'title' => 'Third Posts',
+				'body' => 'Third Posts Body',
 				'published' => 'Y',
 				'created' => '2007-03-18 10:43:23',
 				'updated' => '2007-03-18 10:45:31'
@@ -4842,8 +4842,8 @@ class ModelWriteTest extends BaseModelTest {
 				'Post' => array(
 					'id' => '4',
 					'author_id' => 1,
-					'title' => 'New Fourth Post',
-					'body' => 'Third Post Body',
+					'title' => 'New Fourth Posts',
+					'body' => 'Third Posts Body',
 					'published' => 'N',
 					'created' => static::date(),
 					'updated' => static::date()
@@ -4853,8 +4853,8 @@ class ModelWriteTest extends BaseModelTest {
 				'Post' => array(
 					'id' => '5',
 					'author_id' => 1,
-					'title' => 'Third Post',
-					'body' => 'Third Post Body',
+					'title' => 'Third Posts',
+					'body' => 'Third Posts Body',
 					'published' => 'N',
 					'created' => static::date(),
 					'updated' => static::date()
@@ -4864,9 +4864,9 @@ class ModelWriteTest extends BaseModelTest {
 
 		$TestModel->validate = array('title' => 'notBlank');
 		$data = array(
-			array('author_id' => 1, 'title' => 'New Fourth Post'),
-			array('author_id' => 1, 'title' => 'New Fifth Post'),
-			array('author_id' => 1, 'title' => 'New Sixth Post')
+			array('author_id' => 1, 'title' => 'New Fourth Posts'),
+			array('author_id' => 1, 'title' => 'New Fifth Posts'),
+			array('author_id' => 1, 'title' => 'New Sixth Posts')
 		);
 		$this->assertTrue($TestModel->saveAll($data));
 
@@ -4879,37 +4879,37 @@ class ModelWriteTest extends BaseModelTest {
 		$expected = array(
 			array('Post' => array(
 				'author_id' => 1,
-				'title' => 'First Post',
-				'body' => 'First Post Body',
+				'title' => 'First Posts',
+				'body' => 'First Posts Body',
 				'published' => 'Y'
 			)),
 			array('Post' => array(
 				'author_id' => 3,
-				'title' => 'Second Post',
-				'body' => 'Second Post Body',
+				'title' => 'Second Posts',
+				'body' => 'Second Posts Body',
 				'published' => 'Y'
 			)),
 			array('Post' => array(
 				'author_id' => 1,
-				'title' => 'Third Post',
-				'body' => 'Third Post Body',
+				'title' => 'Third Posts',
+				'body' => 'Third Posts Body',
 				'published' => 'Y'
 			)),
 			array('Post' => array(
 				'author_id' => 1,
-				'title' => 'New Fourth Post',
+				'title' => 'New Fourth Posts',
 				'body' => '',
 				'published' => 'N'
 			)),
 			array('Post' => array(
 				'author_id' => 1,
-				'title' => 'New Fifth Post',
+				'title' => 'New Fifth Posts',
 				'body' => '',
 				'published' => 'N'
 			)),
 			array('Post' => array(
 				'author_id' => 1,
-				'title' => 'New Sixth Post',
+				'title' => 'New Sixth Posts',
 				'body' => '',
 				'published' => 'N'
 		)));
@@ -4928,7 +4928,7 @@ class ModelWriteTest extends BaseModelTest {
 		$data = array(
 			array(
 				'id' => '1',
-				'title' => 'Baleeted First Post',
+				'title' => 'Baleeted First Posts',
 				'body' => 'Baleeted!',
 				'published' => 'N'
 			),
@@ -4950,7 +4950,7 @@ class ModelWriteTest extends BaseModelTest {
 				'Post' => array(
 					'id' => '1',
 					'author_id' => '1',
-					'title' => 'Baleeted First Post',
+					'title' => 'Baleeted First Posts',
 					'body' => 'Baleeted!',
 					'published' => 'N',
 					'created' => '2007-03-18 10:39:23'
@@ -4960,7 +4960,7 @@ class ModelWriteTest extends BaseModelTest {
 					'id' => '2',
 					'author_id' => '3',
 					'title' => 'Just update the title',
-					'body' => 'Second Post Body',
+					'body' => 'Second Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:41:23'
 			)),
@@ -4968,8 +4968,8 @@ class ModelWriteTest extends BaseModelTest {
 				'Post' => array(
 					'id' => '3',
 					'author_id' => '1',
-					'title' => 'Third Post',
-					'body' => 'Third Post Body',
+					'title' => 'Third Posts',
+					'body' => 'Third Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:43:23',
 					'updated' => '2007-03-18 10:45:31'
@@ -4994,7 +4994,7 @@ class ModelWriteTest extends BaseModelTest {
 		$data = array(
 			array(
 				'id' => '1',
-				'title' => 'Un-Baleeted First Post',
+				'title' => 'Un-Baleeted First Posts',
 				'body' => 'Not Baleeted!',
 				'published' => 'Y'
 			),
@@ -5008,10 +5008,10 @@ class ModelWriteTest extends BaseModelTest {
 
 		$result = $TestModel->find('all', array('recursive' => -1, 'order' => 'Post.id ASC'));
 		$errors = array(1 => array('title' => array('This field cannot be left blank')));
-		$transactionWorked = Set::matches('/Post[1][title=Baleeted First Post]', $result);
+		$transactionWorked = Set::matches('/Posts[1][title=Baleeted First Posts]', $result);
 		if (!$transactionWorked) {
-			$this->assertTrue(Set::matches('/Post[1][title=Un-Baleeted First Post]', $result));
-			$this->assertTrue(Set::matches('/Post[2][title=Just update the title]', $result));
+			$this->assertTrue(Set::matches('/Posts[1][title=Un-Baleeted First Posts]', $result));
+			$this->assertTrue(Set::matches('/Posts[2][title=Just update the title]', $result));
 		}
 
 		$this->assertEquals($errors, $TestModel->validationErrors);
@@ -5020,7 +5020,7 @@ class ModelWriteTest extends BaseModelTest {
 		$data = array(
 			array(
 				'id' => '1',
-				'title' => 'Un-Baleeted First Post',
+				'title' => 'Un-Baleeted First Posts',
 				'body' => 'Not Baleeted!',
 				'published' => 'Y'
 			),
@@ -5038,7 +5038,7 @@ class ModelWriteTest extends BaseModelTest {
 				'Post' => array(
 					'id' => '1',
 					'author_id' => '1',
-					'title' => 'Un-Baleeted First Post',
+					'title' => 'Un-Baleeted First Posts',
 					'body' => 'Not Baleeted!',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:39:23'
@@ -5049,7 +5049,7 @@ class ModelWriteTest extends BaseModelTest {
 					'id' => '2',
 					'author_id' => '3',
 					'title' => 'Just update the title',
-					'body' => 'Second Post Body',
+					'body' => 'Second Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:41:23'
 				)
@@ -5058,8 +5058,8 @@ class ModelWriteTest extends BaseModelTest {
 				'Post' => array(
 					'id' => '3',
 					'author_id' => '1',
-					'title' => 'Third Post',
-					'body' => 'Third Post Body',
+					'title' => 'Third Posts',
+					'body' => 'Third Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:43:23',
 					'updated' => '2007-03-18 10:45:31'
@@ -5090,7 +5090,7 @@ class ModelWriteTest extends BaseModelTest {
 		$data = array(
 			array(
 				'id' => '1',
-				'title' => 'Re-Baleeted First Post',
+				'title' => 'Re-Baleeted First Posts',
 				'body' => 'Baleeted!',
 				'published' => 'N'
 			),
@@ -5176,7 +5176,7 @@ class ModelWriteTest extends BaseModelTest {
 		$model->Comment->validate = array('comment' => 'notBlank');
 		$result = $model->saveAll(array(
 			'Article' => array(
-				'title' => 'Post with Author',
+				'title' => 'Posts with Author',
 				'body' => 'This post will be saved author'
 			),
 			'Comment' => array(
@@ -5200,7 +5200,7 @@ class ModelWriteTest extends BaseModelTest {
 		$result = $model->saveAll(
 			array(
 				'Article' => array(
-					'title' => 'Post with Author',
+					'title' => 'Posts with Author',
 					'body' => 'This post will be saved with an author',
 					'user_id' => 2
 				),
@@ -5222,7 +5222,7 @@ class ModelWriteTest extends BaseModelTest {
 		$model->deleteAll(true);
 		$data = array(
 			'Article' => array(
-				'title' => 'Post with Author saveAlled from comment',
+				'title' => 'Posts with Author saveAlled from comment',
 				'body' => 'This post will be saved with an author',
 				'user_id' => 2
 			),
@@ -5236,7 +5236,7 @@ class ModelWriteTest extends BaseModelTest {
 		$result = $model->find('all');
 		$this->assertEquals(
 			$result[0]['Article']['title'],
-			'Post with Author saveAlled from comment'
+			'Posts with Author saveAlled from comment'
 		);
 		$this->assertEquals('Only new comment', $result[0]['Comment'][0]['comment']);
 	}
@@ -5436,7 +5436,7 @@ class ModelWriteTest extends BaseModelTest {
 
 		$TestModel->saveAssociated(array(
 			'Post' => array(
-				'title' => 'Post with Author',
+				'title' => 'Posts with Author',
 				'body' => 'This post will be saved with an author'
 			),
 			'Author' => array(
@@ -5449,7 +5449,7 @@ class ModelWriteTest extends BaseModelTest {
 			'Post' => array(
 				'id' => '4',
 				'author_id' => '5',
-				'title' => 'Post with Author',
+				'title' => 'Posts with Author',
 				'body' => 'This post will be saved with an author',
 				'published' => 'N'
 			),
@@ -5845,7 +5845,7 @@ class ModelWriteTest extends BaseModelTest {
 
 		$result = $TestModel->saveAssociated(array(
 			'Article' => array(
-				'title' => 'Post with Author',
+				'title' => 'Posts with Author',
 				'body' => 'This post will be saved with an author',
 				'user_id' => 2
 			),
@@ -5884,7 +5884,7 @@ class ModelWriteTest extends BaseModelTest {
 		$result = $TestModel->saveMany(array(
 			array(
 				'id' => '1',
-				'title' => 'Baleeted First Post',
+				'title' => 'Baleeted First Posts',
 				'body' => 'Baleeted!',
 				'published' => 'N'
 			),
@@ -5904,7 +5904,7 @@ class ModelWriteTest extends BaseModelTest {
 		$result = $TestModel->saveMany(array(
 			array(
 				'id' => '1',
-				'title' => 'Un-Baleeted First Post',
+				'title' => 'Un-Baleeted First Posts',
 				'body' => 'Not Baleeted!',
 				'published' => 'Y'
 			),
@@ -6088,7 +6088,7 @@ class ModelWriteTest extends BaseModelTest {
 		$Post->setDataSourceObject($db);
 
 		$data = array(
-			array('author_id' => 1, 'title' => 'New Fourth Post'),
+			array('author_id' => 1, 'title' => 'New Fourth Posts'),
 			array('author_id' => 1, 'title' => '')
 		);
 		$Post->saveMany($data, array('validate' => true));
@@ -6102,8 +6102,8 @@ class ModelWriteTest extends BaseModelTest {
 		$Post->setDataSourceObject($db);
 
 		$data = array(
-			array('author_id' => 1, 'title' => 'New Fourth Post'),
-			array('author_id' => 1, 'title' => 'New Fifth Post', 'body' => $db->expression('PDO_EXCEPTION()'))
+			array('author_id' => 1, 'title' => 'New Fourth Posts'),
+			array('author_id' => 1, 'title' => 'New Fifth Posts', 'body' => $db->expression('PDO_EXCEPTION()'))
 		);
 
 		try {
@@ -6121,8 +6121,8 @@ class ModelWriteTest extends BaseModelTest {
 		$Post->setDataSourceObject($db);
 
 		$data = array(
-			array('author_id' => 1, 'title' => 'New Fourth Post'),
-			array('author_id' => 1, 'title' => 'New Fifth Post')
+			array('author_id' => 1, 'title' => 'New Fourth Posts'),
+			array('author_id' => 1, 'title' => 'New Fifth Posts')
 		);
 		$Post->saveMany($data, array('validate' => true));
 	}
@@ -6239,8 +6239,8 @@ class ModelWriteTest extends BaseModelTest {
 
 		$TestModel->validate = array('title' => 'notBlank');
 		$data = array(
-			array('author_id' => 1, 'title' => 'New Fourth Post'),
-			array('author_id' => 1, 'title' => 'New Fifth Post'),
+			array('author_id' => 1, 'title' => 'New Fourth Posts'),
+			array('author_id' => 1, 'title' => 'New Fifth Posts'),
 			array('author_id' => 1, 'title' => '')
 		);
 		$this->assertFalse($TestModel->saveMany($data));
@@ -6250,8 +6250,8 @@ class ModelWriteTest extends BaseModelTest {
 			array('Post' => array(
 				'id' => '1',
 				'author_id' => 1,
-				'title' => 'First Post',
-				'body' => 'First Post Body',
+				'title' => 'First Posts',
+				'body' => 'First Posts Body',
 				'published' => 'Y',
 				'created' => '2007-03-18 10:39:23',
 				'updated' => '2007-03-18 10:41:31'
@@ -6259,8 +6259,8 @@ class ModelWriteTest extends BaseModelTest {
 			array('Post' => array(
 				'id' => '2',
 				'author_id' => 3,
-				'title' => 'Second Post',
-				'body' => 'Second Post Body',
+				'title' => 'Second Posts',
+				'body' => 'Second Posts Body',
 				'published' => 'Y',
 				'created' => '2007-03-18 10:41:23',
 				'updated' => '2007-03-18 10:43:31'
@@ -6268,8 +6268,8 @@ class ModelWriteTest extends BaseModelTest {
 			array('Post' => array(
 				'id' => '3',
 				'author_id' => 1,
-				'title' => 'Third Post',
-				'body' => 'Third Post Body',
+				'title' => 'Third Posts',
+				'body' => 'Third Posts Body',
 				'published' => 'Y',
 				'created' => '2007-03-18 10:43:23',
 				'updated' => '2007-03-18 10:45:31'
@@ -6281,7 +6281,7 @@ class ModelWriteTest extends BaseModelTest {
 				'Post' => array(
 					'id' => '4',
 					'author_id' => 1,
-					'title' => 'New Fourth Post',
+					'title' => 'New Fourth Posts',
 					'body' => null,
 					'published' => 'N'
 			));
@@ -6290,7 +6290,7 @@ class ModelWriteTest extends BaseModelTest {
 				'Post' => array(
 					'id' => '5',
 					'author_id' => 1,
-					'title' => 'New Fifth Post',
+					'title' => 'New Fifth Posts',
 					'body' => null,
 					'published' => 'N',
 			));
@@ -6309,9 +6309,9 @@ class ModelWriteTest extends BaseModelTest {
 		$this->assertEquals($expected, $result);
 
 		$data = array(
-			array('author_id' => 1, 'title' => 'New Fourth Post'),
+			array('author_id' => 1, 'title' => 'New Fourth Posts'),
 			array('author_id' => 1, 'title' => ''),
-			array('author_id' => 1, 'title' => 'New Sixth Post')
+			array('author_id' => 1, 'title' => 'New Sixth Posts')
 		);
 		$this->assertFalse($TestModel->saveMany($data));
 
@@ -6320,8 +6320,8 @@ class ModelWriteTest extends BaseModelTest {
 			array('Post' => array(
 				'id' => '1',
 				'author_id' => 1,
-				'title' => 'First Post',
-				'body' => 'First Post Body',
+				'title' => 'First Posts',
+				'body' => 'First Posts Body',
 				'published' => 'Y',
 				'created' => '2007-03-18 10:39:23',
 				'updated' => '2007-03-18 10:41:31'
@@ -6329,8 +6329,8 @@ class ModelWriteTest extends BaseModelTest {
 			array('Post' => array(
 				'id' => '2',
 				'author_id' => 3,
-				'title' => 'Second Post',
-				'body' => 'Second Post Body',
+				'title' => 'Second Posts',
+				'body' => 'Second Posts Body',
 				'published' => 'Y',
 				'created' => '2007-03-18 10:41:23',
 				'updated' => '2007-03-18 10:43:31'
@@ -6338,8 +6338,8 @@ class ModelWriteTest extends BaseModelTest {
 			array('Post' => array(
 				'id' => '3',
 				'author_id' => 1,
-				'title' => 'Third Post',
-				'body' => 'Third Post Body',
+				'title' => 'Third Posts',
+				'body' => 'Third Posts Body',
 				'published' => 'Y',
 				'created' => '2007-03-18 10:43:23',
 				'updated' => '2007-03-18 10:45:31'
@@ -6351,8 +6351,8 @@ class ModelWriteTest extends BaseModelTest {
 				'Post' => array(
 					'id' => '4',
 					'author_id' => 1,
-					'title' => 'New Fourth Post',
-					'body' => 'Third Post Body',
+					'title' => 'New Fourth Posts',
+					'body' => 'Third Posts Body',
 					'published' => 'N'
 			));
 
@@ -6360,8 +6360,8 @@ class ModelWriteTest extends BaseModelTest {
 				'Post' => array(
 					'id' => '5',
 					'author_id' => 1,
-					'title' => 'Third Post',
-					'body' => 'Third Post Body',
+					'title' => 'Third Posts',
+					'body' => 'Third Posts Body',
 					'published' => 'N'
 			));
 			$this->assertEquals(static::date(), $result[3]['Post']['created']);
@@ -6375,9 +6375,9 @@ class ModelWriteTest extends BaseModelTest {
 
 		$TestModel->validate = array('title' => 'notBlank');
 		$data = array(
-			array('author_id' => 1, 'title' => 'New Fourth Post'),
-			array('author_id' => 1, 'title' => 'New Fifth Post'),
-			array('author_id' => 1, 'title' => 'New Sixth Post')
+			array('author_id' => 1, 'title' => 'New Fourth Posts'),
+			array('author_id' => 1, 'title' => 'New Fifth Posts'),
+			array('author_id' => 1, 'title' => 'New Sixth Posts')
 		);
 		$this->assertTrue($TestModel->saveMany($data));
 
@@ -6390,37 +6390,37 @@ class ModelWriteTest extends BaseModelTest {
 		$expected = array(
 			array('Post' => array(
 				'author_id' => 1,
-				'title' => 'First Post',
-				'body' => 'First Post Body',
+				'title' => 'First Posts',
+				'body' => 'First Posts Body',
 				'published' => 'Y'
 			)),
 			array('Post' => array(
 				'author_id' => 3,
-				'title' => 'Second Post',
-				'body' => 'Second Post Body',
+				'title' => 'Second Posts',
+				'body' => 'Second Posts Body',
 				'published' => 'Y'
 			)),
 			array('Post' => array(
 				'author_id' => 1,
-				'title' => 'Third Post',
-				'body' => 'Third Post Body',
+				'title' => 'Third Posts',
+				'body' => 'Third Posts Body',
 				'published' => 'Y'
 			)),
 			array('Post' => array(
 				'author_id' => 1,
-				'title' => 'New Fourth Post',
+				'title' => 'New Fourth Posts',
 				'body' => '',
 				'published' => 'N'
 			)),
 			array('Post' => array(
 				'author_id' => 1,
-				'title' => 'New Fifth Post',
+				'title' => 'New Fifth Posts',
 				'body' => '',
 				'published' => 'N'
 			)),
 			array('Post' => array(
 				'author_id' => 1,
-				'title' => 'New Sixth Post',
+				'title' => 'New Sixth Posts',
 				'body' => '',
 				'published' => 'N'
 		)));
@@ -6439,7 +6439,7 @@ class ModelWriteTest extends BaseModelTest {
 		$data = array(
 			array(
 				'id' => '1',
-				'title' => 'Baleeted First Post',
+				'title' => 'Baleeted First Posts',
 				'body' => 'Baleeted!',
 				'published' => 'N'
 			),
@@ -6461,7 +6461,7 @@ class ModelWriteTest extends BaseModelTest {
 				'Post' => array(
 					'id' => '1',
 					'author_id' => '1',
-					'title' => 'Baleeted First Post',
+					'title' => 'Baleeted First Posts',
 					'body' => 'Baleeted!',
 					'published' => 'N',
 					'created' => '2007-03-18 10:39:23'
@@ -6472,7 +6472,7 @@ class ModelWriteTest extends BaseModelTest {
 					'id' => '2',
 					'author_id' => '3',
 					'title' => 'Just update the title',
-					'body' => 'Second Post Body',
+					'body' => 'Second Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:41:23'
 				)
@@ -6481,8 +6481,8 @@ class ModelWriteTest extends BaseModelTest {
 				'Post' => array(
 					'id' => '3',
 					'author_id' => '1',
-					'title' => 'Third Post',
-					'body' => 'Third Post Body',
+					'title' => 'Third Posts',
+					'body' => 'Third Posts Body',
 					'published' => 'Y',
 					'created' => '2007-03-18 10:43:23',
 					'updated' => '2007-03-18 10:45:31'
@@ -6510,7 +6510,7 @@ class ModelWriteTest extends BaseModelTest {
 		$data = array(
 			array(
 				'id' => '1',
-				'title' => 'Un-Baleeted First Post',
+				'title' => 'Un-Baleeted First Posts',
 				'body' => 'Not Baleeted!',
 				'published' => 'Y'
 			),
@@ -6524,10 +6524,10 @@ class ModelWriteTest extends BaseModelTest {
 
 		$result = $TestModel->find('all', array('recursive' => -1, 'order' => 'Post.id ASC'));
 		$errors = array(1 => array('title' => array('This field cannot be left blank')));
-		$transactionWorked = Set::matches('/Post[1][title=Baleeted First Post]', $result);
+		$transactionWorked = Set::matches('/Posts[1][title=Baleeted First Posts]', $result);
 		if (!$transactionWorked) {
-			$this->assertTrue(Set::matches('/Post[1][title=Un-Baleeted First Post]', $result));
-			$this->assertTrue(Set::matches('/Post[2][title=Just update the title]', $result));
+			$this->assertTrue(Set::matches('/Posts[1][title=Un-Baleeted First Posts]', $result));
+			$this->assertTrue(Set::matches('/Posts[2][title=Just update the title]', $result));
 		}
 
 		$this->assertEquals($errors, $TestModel->validationErrors);
@@ -6536,7 +6536,7 @@ class ModelWriteTest extends BaseModelTest {
 		$data = array(
 			array(
 				'id' => '1',
-				'title' => 'Un-Baleeted First Post',
+				'title' => 'Un-Baleeted First Posts',
 				'body' => 'Not Baleeted!',
 				'published' => 'Y'
 			),
@@ -6559,7 +6559,7 @@ class ModelWriteTest extends BaseModelTest {
 				'Post' => array(
 					'id' => '1',
 					'author_id' => '1',
-					'title' => 'Un-Baleeted First Post',
+					'title' => 'Un-Baleeted First Posts',
 					'body' => 'Not Baleeted!',
 					'published' => 'Y',
 			)),
@@ -6568,15 +6568,15 @@ class ModelWriteTest extends BaseModelTest {
 					'id' => '2',
 					'author_id' => '3',
 					'title' => 'Just update the title',
-					'body' => 'Second Post Body',
+					'body' => 'Second Posts Body',
 					'published' => 'Y',
 			)),
 			array(
 				'Post' => array(
 					'id' => '3',
 					'author_id' => '1',
-					'title' => 'Third Post',
-					'body' => 'Third Post Body',
+					'title' => 'Third Posts',
+					'body' => 'Third Posts Body',
 					'published' => 'Y',
 			)),
 			array(
@@ -6593,7 +6593,7 @@ class ModelWriteTest extends BaseModelTest {
 		$data = array(
 			array(
 				'id' => '1',
-				'title' => 'Re-Baleeted First Post',
+				'title' => 'Re-Baleeted First Posts',
 				'body' => 'Baleeted!',
 				'published' => 'N'
 			),
@@ -6659,7 +6659,7 @@ class ModelWriteTest extends BaseModelTest {
 		$model->Comment->validate = array('comment' => 'notBlank');
 		$result = $model->saveAssociated(array(
 			'Article' => array(
-				'title' => 'Post with Author',
+				'title' => 'Posts with Author',
 				'body' => 'This post will be saved author'
 			),
 			'Comment' => array(
@@ -6683,7 +6683,7 @@ class ModelWriteTest extends BaseModelTest {
 		$result = $model->saveAssociated(
 			array(
 				'Article' => array(
-					'title' => 'Post with Author',
+					'title' => 'Posts with Author',
 					'body' => 'This post will be saved with an author',
 					'user_id' => 2
 				),
@@ -6705,7 +6705,7 @@ class ModelWriteTest extends BaseModelTest {
 		$model->deleteAll(true);
 		$data = array(
 			'Article' => array(
-				'title' => 'Post with Author saveAlled from comment',
+				'title' => 'Posts with Author saveAlled from comment',
 				'body' => 'This post will be saved with an author',
 				'user_id' => 2
 			),
@@ -6718,7 +6718,7 @@ class ModelWriteTest extends BaseModelTest {
 
 		$result = $model->find('all');
 		$this->assertEquals(
-			'Post with Author saveAlled from comment',
+			'Posts with Author saveAlled from comment',
 			$result[0]['Article']['title']
 		);
 		$this->assertEquals('Only new comment', $result[0]['Comment'][0]['comment']);
@@ -6918,7 +6918,7 @@ class ModelWriteTest extends BaseModelTest {
 
 		$TestModel->saveAssociated(array(
 			'Post' => array(
-				'title' => $db->expression("(SELECT 'Post with Author')"),
+				'title' => $db->expression("(SELECT 'Posts with Author')"),
 				'body' => 'This post will be saved with an author'
 			),
 			'Author' => array(
@@ -6929,7 +6929,7 @@ class ModelWriteTest extends BaseModelTest {
 		$result = $TestModel->find('first', array(
 			'order' => array('Post.id ' => 'DESC')
 		));
-		$this->assertEquals('Post with Author', $result['Post']['title']);
+		$this->assertEquals('Posts with Author', $result['Post']['title']);
 	}
 
 /**
@@ -7236,7 +7236,7 @@ class ModelWriteTest extends BaseModelTest {
 		);
 		$data = array(
 			'Post' => array(
-				'title' => 'Post without body',
+				'title' => 'Posts without body',
 				'body' => 'This will not be saved',
 			),
 			'Author' => array(
@@ -7253,7 +7253,7 @@ class ModelWriteTest extends BaseModelTest {
 			'Post' => array(
 				'id' => '4',
 				'author_id' => '5',
-				'title' => 'Post without body',
+				'title' => 'Posts without body',
 				'body' => null,
 				'published' => 'N',
 				'created' => static::date(),
@@ -7278,7 +7278,7 @@ class ModelWriteTest extends BaseModelTest {
 		);
 		$data = array(
 			'Post' => array(
-				'title' => 'Post without body 2',
+				'title' => 'Posts without body 2',
 				'body' => 'This will not be saved'
 			),
 			'Author' => array(
@@ -7297,8 +7297,8 @@ class ModelWriteTest extends BaseModelTest {
 		$data = array(
 			'Post' => array(
 				'id' => '5',
-				'title' => 'Post title',
-				'body' => 'Post body'
+				'title' => 'Posts title',
+				'body' => 'Posts body'
 			),
 			'Author' => array(
 				'id' => '6',
@@ -7316,8 +7316,8 @@ class ModelWriteTest extends BaseModelTest {
 			'Post' => array(
 				'id' => '5',
 				'author_id' => '6',
-				'title' => 'Post title',
-				'body' => 'Post body',
+				'title' => 'Posts title',
+				'body' => 'Posts body',
 				'published' => 'N',
 				'created' => static::date(),
 				'updated' => static::date()
@@ -7543,7 +7543,7 @@ class ModelWriteTest extends BaseModelTest {
 		);
 		$TestModel->saveAll(array(
 			'Post' => array(
-				'title' => 'Post without body',
+				'title' => 'Posts without body',
 				'body' => 'This will not be saved',
 			),
 			'Author' => array(
@@ -8170,10 +8170,10 @@ class ModelWriteTest extends BaseModelTest {
 		$Post->setDataSourceObject($db);
 
 		$data = array(
-			array('author_id' => 1, 'title' => 'Outer Post'),
+			array('author_id' => 1, 'title' => 'Outer Posts'),
 		);
 		$Post->dataForAfterSave = array(
-			array('author_id' => 1, 'title' => 'Inner Post'),
+			array('author_id' => 1, 'title' => 'Inner Posts'),
 		);
 		$this->assertTrue($Post->saveMany($data));
 
@@ -8186,10 +8186,10 @@ class ModelWriteTest extends BaseModelTest {
 		$Post->setDataSourceObject($db);
 
 		$data = array(
-			array('author_id' => 1, 'title' => 'Outer Post'),
+			array('author_id' => 1, 'title' => 'Outer Posts'),
 		);
 		$Post->dataForAfterSave = array(
-			array('author_id' => 1, 'title' => 'Inner Post'),
+			array('author_id' => 1, 'title' => 'Inner Posts'),
 		);
 		$this->assertTrue($Post->saveMany($data));
 
@@ -8200,10 +8200,10 @@ class ModelWriteTest extends BaseModelTest {
 		$db->expects($this->exactly(2))->method('rollback');
 		$Post->setDataSourceObject($db);
 		$data = array(
-			array('author_id' => 1, 'title' => 'Outer Post'),
+			array('author_id' => 1, 'title' => 'Outer Posts'),
 		);
 		$Post->dataForAfterSave = array(
-			array('author_id' => 1, 'title' => 'Inner Post', 'body' => $db->expression('PDO_EXCEPTION()')),
+			array('author_id' => 1, 'title' => 'Inner Posts', 'body' => $db->expression('PDO_EXCEPTION()')),
 		);
 
 		try {
@@ -8235,13 +8235,13 @@ class ModelWriteTest extends BaseModelTest {
 		$data = array(
 			'Author' => array('user' => 'outer'),
 			'Post' => array(
-				array('title' => 'Outer Post'),
+				array('title' => 'Outer Posts'),
 			)
 		);
 		$Author->dataForAfterSave = array(
 			'Author' => array('user' => 'inner'),
 			'Post' => array(
-				array('title' => 'Inner Post'),
+				array('title' => 'Inner Posts'),
 			)
 		);
 		$this->assertTrue($Author->saveAssociated($data));
@@ -8257,13 +8257,13 @@ class ModelWriteTest extends BaseModelTest {
 		$data = array(
 			'Author' => array('user' => 'outer'),
 			'Post' => array(
-				array('title' => 'Outer Post'),
+				array('title' => 'Outer Posts'),
 			)
 		);
 		$Author->dataForAfterSave = array(
 			'Author' => array('user' => 'inner'),
 			'Post' => array(
-				array('title' => 'Inner Post'),
+				array('title' => 'Inner Posts'),
 			)
 		);
 		$this->assertTrue($Author->saveAssociated($data));
@@ -8278,13 +8278,13 @@ class ModelWriteTest extends BaseModelTest {
 		$data = array(
 			'Author' => array('user' => 'outer'),
 			'Post' => array(
-				array('title' => 'Outer Post'),
+				array('title' => 'Outer Posts'),
 			)
 		);
 		$Author->dataForAfterSave = array(
 			'Author' => array('user' => 'inner', 'password' => $db->expression('PDO_EXCEPTION()')),
 			'Post' => array(
-				array('title' => 'Inner Post'),
+				array('title' => 'Inner Posts'),
 			)
 		);
 

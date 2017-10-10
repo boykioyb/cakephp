@@ -886,7 +886,7 @@ class ModelDeleteTest extends BaseModelTest {
 		));
 		$this->assertEquals(2, count($before[0]['Tag']), 'Tag count for Article.id = 1 is incorrect, should be 2 %s');
 
-		// From now on, Tag #1 is only associated with Post #1
+		// From now on, Tag #1 is only associated with Posts #1
 		$submittedData = array(
 			"Tag" => array("id" => 1, 'tag' => 'tag1'),
 			"Article" => array(

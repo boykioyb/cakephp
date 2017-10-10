@@ -1,6 +1,6 @@
 <?php
 /**
- * Test Plugin Post Model
+ * Test Plugin Posts Model
  *
  * CakePHP : Rapid Development Framework (https://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
@@ -47,16 +47,16 @@ class TestPluginPost extends TestPluginAppModel {
 			'rule' => array('custom', '.*'),
 			'allowEmpty' => true,
 			'required' => false,
-			'message' => 'Post title is required'
+			'message' => 'Posts title is required'
 		),
 		'body' => array(
 			'first_rule' => array(
 				'rule' => array('custom', '.*'),
 				'allowEmpty' => true,
 				'required' => false,
-				'message' => 'Post body is required'
+				'message' => 'Posts body is required'
 			),
-			'Post body is super required' => array(
+			'Posts body is super required' => array(
 				'rule' => array('custom', '.*'),
 				'allowEmpty' => true,
 				'required' => false,

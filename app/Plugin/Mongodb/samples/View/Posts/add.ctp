@@ -1,7 +1,7 @@
 <div class="posts form">
 <?php echo $this->Form->create('Post' , array( 'type' => 'post' ));?>
 	<fieldset>
- 		<legend><?php __('Add Post');?></legend>
+ 		<legend><?php __('Add Posts');?></legend>
 	<?php
 		echo $this->Form->input('title');
 		echo $this->Form->input('body');

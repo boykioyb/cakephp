@@ -524,7 +524,7 @@ class TestTaskTest extends CakeTestCase {
 		$this->assertEquals($expected, $result);
 
 		$result = $this->Task->generateConstructor('model', 'Post', null);
-		$expected = array('', "ClassRegistry::init('Post');\n", '');
+		$expected = array('', "ClassRegistry::init('Posts');\n", '');
 		$this->assertEquals($expected, $result);
 
 		$result = $this->Task->generateConstructor('helper', 'FormHelper', null);

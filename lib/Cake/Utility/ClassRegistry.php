@@ -71,7 +71,7 @@ class ClassRegistry {
  * is used as a factory for models, and handle correct injecting of settings, that assist in testing.
  *
  * Examples
- * Simple Use: Get a Post model instance ```ClassRegistry::init('Post');```
+ * Simple Use: Get a Posts model instance ```ClassRegistry::init('Posts');```
  *
  * Expanded: ```array('class' => 'ClassName', 'alias' => 'AliasNameStoredInTheRegistry');```
  *

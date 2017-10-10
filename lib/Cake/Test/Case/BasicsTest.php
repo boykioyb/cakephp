@@ -1191,7 +1191,7 @@ EXPECTED;
 		$result = pluginSplit('Post', false, 'Blog');
 		$this->assertEquals(array('Blog', 'Post'), $result);
 
-		$result = pluginSplit('Blog.Post', false, 'Ultimate');
+		$result = pluginSplit('Blog.Posts', false, 'Ultimate');
 		$this->assertEquals(array('Blog', 'Post'), $result);
 	}
 }

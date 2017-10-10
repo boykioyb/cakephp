@@ -529,8 +529,8 @@ class Model extends CakeObject implements CakeEventListener {
 /**
  * The column name(s) and direction(s) to order find results by default.
  *
- * public $order = "Post.created DESC";
- * public $order = array("Post.view_count DESC", "Post.rating DESC");
+ * public $order = "Posts.created DESC";
+ * public $order = array("Posts.view_count DESC", "Posts.rating DESC");
  *
  * @var string
  * @link https://book.cakephp.org/2.0/en/models/model-attributes.html#order
@@ -677,7 +677,7 @@ class Model extends CakeObject implements CakeEventListener {
  * - `id`: The id to start the model on.
  * - `table`: The table to use for this model.
  * - `ds`: The connection name this model is connected to.
- * - `name`: The name of the model eg. Post.
+ * - `name`: The name of the model eg. Posts.
  * - `alias`: The alias of the model, this is used for registering the instance in the `ClassRegistry`.
  *   eg. `ParentThread`
  *
@@ -691,7 +691,7 @@ class Model extends CakeObject implements CakeEventListener {
  * You can dynamically create model instances using the $id array syntax.
  *
  * ```
- * $Post = new Model(array('table' => 'posts', 'name' => 'Post', 'ds' => 'connection2'));
+ * $Posts = new Model(array('table' => 'posts', 'name' => 'Posts', 'ds' => 'connection2'));
  * ```
  *
  * Would create a model attached to the posts table on connection2. Dynamic model creation is useful
@@ -3531,8 +3531,8 @@ class Model extends CakeObject implements CakeEventListener {
  * current database driver's rules.
  *
  * @param string $field Field to escape (e.g: id)
- * @param string $alias Alias for the model (e.g: Post)
- * @return string The name of the escaped field for this Model (i.e. id becomes `Post`.`id`).
+ * @param string $alias Alias for the model (e.g: Posts)
+ * @return string The name of the escaped field for this Model (i.e. id becomes `Posts`.`id`).
  */
 	public function escapeField($field = null, $alias = null) {
 		if (empty($alias)) {
